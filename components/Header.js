@@ -18,8 +18,9 @@ class Header {
                 <nav class="navbar">
                     <div class="nav-container">
                         <div class="nav-brand">
-                            <img src="https://via.placeholder.com/40x40/667eea/ffffff?text=PK" 
-                                 alt="Pavan Kumar" class="brand-logo" id="brand-logo">
+                            <img src="assets/profile-image.jpg" 
+                                 alt="Pavan Kumar" class="brand-logo" id="brand-logo" 
+                                 onerror="this.src='https://via.placeholder.com/40x40/667eea/ffffff?text=PK'">
                             <span class="brand-text">Pavan Kumar Korlakunta</span>
                         </div>
                         
@@ -43,6 +44,24 @@ class Header {
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="#github" class="nav-link" data-section="github">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#linkedin" class="nav-link" data-section="linkedin">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#education" class="nav-link" data-section="education">
+                                    <i class="fas fa-university"></i>
+                                    <span>Education</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="#projects" class="nav-link" data-section="projects">
                                     <i class="fas fa-code"></i>
                                     <span>Projects</span>
@@ -61,8 +80,9 @@ class Header {
                                 <i class="fas fa-moon"></i>
                             </button>
                             <div class="profile-upload">
-                                <img src="https://via.placeholder.com/45x45/667eea/ffffff?text=PK" 
-                                     alt="Profile" class="profile-image" id="profile-image">
+                                <img src="assets/profile-image.jpg" 
+                                     alt="Profile" class="profile-image" id="profile-image"
+                                     onerror="this.src='https://via.placeholder.com/45x45/667eea/ffffff?text=PK'">
                                 <input type="file" id="image-upload" accept="image/*" hidden>
                                 <button class="upload-btn" onclick="document.getElementById('image-upload').click()">
                                     <i class="fas fa-camera"></i>

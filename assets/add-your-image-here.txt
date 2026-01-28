@@ -1,0 +1,12 @@
+INSTRUCTIONS TO ADD YOUR PROFILE IMAGE:
+
+1. Save your profile photo as "profile-image.jpg" in this assets folder
+2. Make sure the filename is exactly: profile-image.jpg
+3. The image should be square (400x400 pixels recommended)
+4. Supported formats: JPG, JPEG, PNG
+
+Your image path should be: assets/profile-image.jpg
+
+If you're still having issues, you can:
+- Use a different image hosting service and update the src in the HTML
+- Or provide the image in base64 format
