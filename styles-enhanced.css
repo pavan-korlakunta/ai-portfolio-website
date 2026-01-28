@@ -239,6 +239,44 @@ body {
     z-index: 2;
     position: relative;
     max-width: 800px;
+    margin-left: 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s forwards;
+    text-align: left;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.7s forwards;
+    text-align: left;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 0 2rem 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.9s forwards;
+    text-align: left;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeInUp 1s ease 1.1s forwards;
 }
 
 .hero-stats {
@@ -317,7 +355,180 @@ body {
     color: var(--primary-color);
 }
 
-/* Enhanced About Section */
+/* AI Learning Path Section */
+.learning-path {
+    background: var(--bg-primary);
+    padding: 100px 0;
+}
+
+.learning-phases {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.phase-card {
+    background: var(--bg-tertiary);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.phase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-medium);
+}
+
+.phase-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+.phase-number {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 3rem;
+    font-weight: 900;
+    opacity: 0.3;
+}
+
+.phase-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.phase-header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.phase-content {
+    padding: 2rem;
+}
+
+.learning-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.learning-item:hover {
+    background: var(--bg-primary);
+    transform: translateX(10px);
+}
+
+.item-info h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.item-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.difficulty:contains("Beginner") {
+    background: rgba(76, 175, 80, 0.2);
+    color: var(--success-color);
+}
+
+.item-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.learn-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.learn-link:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.learning-cta {
+    text-align: center;
+    background: var(--bg-tertiary);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.learning-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.learning-cta p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* Difficulty Colors */
+.learning-item:has(.difficulty:contains("Beginner")) .difficulty {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.learning-item:has(.difficulty:contains("Intermediate")) .difficulty {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    border: 1px solid #ff9800;
+}
+
+.learning-item:has(.difficulty:contains("Advanced")) .difficulty {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+
+.learning-item:has(.difficulty:contains("Expert")) .difficulty {
+    background: rgba(156, 39, 176, 0.2);
+    color: #9c27b0;
+    border: 1px solid #9c27b0;
+}
 .about {
     background: var(--bg-secondary);
     padding: 100px 0;
