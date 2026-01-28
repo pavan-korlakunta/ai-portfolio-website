@@ -429,35 +429,56 @@
             background: rgba(30, 41, 59, 0.3);
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            text-align: left;
+        .about-personal {
+            max-width: 900px;
+            margin: 0 auto 4rem auto;
+            text-align: center;
         }
 
-        .about-text p {
+        .about-personal p {
             font-size: 1.1rem;
             color: #94a3b8;
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
 
+        .about-content {
+            display: block;
+            text-align: left;
+        }
+
         .skills-grid {
             display: grid;
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .skill-category {
             background: rgba(51, 65, 85, 0.5);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 12px;
             border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
         }
 
         .skill-category h3 {
             color: #3b82f6;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .skill-category h3 i {
             font-size: 1.25rem;
         }
 
@@ -470,6 +491,7 @@
             color: #94a3b8;
             border-bottom: 1px solid rgba(148, 163, 184, 0.1);
             transition: color 0.3s ease;
+            line-height: 1.6;
         }
 
         .skill-category li:hover {
@@ -478,6 +500,11 @@
 
         .skill-category li:last-child {
             border-bottom: none;
+        }
+
+        .skill-category li strong {
+            color: #f1f5f9;
+            font-weight: 600;
         }
 
         /* Learning Section */
@@ -793,7 +820,8 @@
             }
             
             .about-content,
-            .contact-content {
+            .contact-content,
+            .skills-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -1178,8 +1206,8 @@
                             <h5 style="color: #3b82f6; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">🤖 AI Chatbots</h5>
                             <div class="ai-tools-horizontal">
                                 <a href="https://chat.openai.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #10a37f; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
-                                        GPT
+                                    <div class="tool-logo" style="background: #10a37f; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
+                                        <i class="fas fa-comments"></i>
                                     </div>
                                     <span>ChatGPT</span>
                                 </a>
@@ -1274,36 +1302,53 @@
         <section id="about" class="section about">
             <h2 class="section-title">About Me</h2>
             <p class="section-subtitle">AI Expert & Educator from Atlanta, Georgia</p>
+            
+            <!-- Personal Information -->
+            <div class="about-personal">
+                <p>
+                    I'm Pavan Kumar Korlakunta, an AI Expert and passionate educator based in Atlanta, Georgia. 
+                    With a Master's in Computer Science from Southeast Missouri State University and 3+ years 
+                    of hands-on experience, I specialize in the complete AI ecosystem.
+                </p>
+                <p>
+                    My expertise spans Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, 
+                    Data Science, AI Agents, and MLOps. I'm proficient in cloud platforms including AWS, Azure, 
+                    and GCP, with infrastructure management using Terraform. I'm passionate about making AI accessible 
+                    to everyone through education and practical implementations.
+                </p>
+            </div>
+
+            <!-- Skills Grid -->
             <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm Pavan Kumar Korlakunta, an AI Expert and passionate educator based in Atlanta, Georgia. 
-                        With a Master's in Computer Science from Southeast Missouri State University and 3+ years 
-                        of hands-on experience, I specialize in the complete AI ecosystem.
-                    </p>
-                    <p>
-                        My expertise spans Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, 
-                        Data Science, AI Agents, and MLOps. I'm proficient in cloud platforms including AWS, Azure, 
-                        and GCP, with infrastructure management using Terraform.
-                    </p>
-                </div>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>AI & Machine Learning</h3>
+                        <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
                         <ul>
-                            <li>Machine Learning</li>
-                            <li>Deep Learning</li>
-                            <li>Computer Vision</li>
-                            <li>Natural Language Processing</li>
+                            <li><strong>Machine Learning:</strong> Supervised, Unsupervised, Reinforcement Learning</li>
+                            <li><strong>Deep Learning:</strong> Neural Networks, CNN, RNN, LSTM, Transformers</li>
+                            <li><strong>Computer Vision:</strong> Image Classification, Object Detection, OCR</li>
+                            <li><strong>Natural Language Processing:</strong> Text Analysis, Sentiment Analysis, LLMs</li>
+                            <li><strong>Frameworks:</strong> TensorFlow, PyTorch, Keras, Scikit-learn</li>
+                            <li><strong>Libraries:</strong> OpenCV, NLTK, spaCy, Hugging Face</li>
+                            <li><strong>AI Agents:</strong> LangChain, AutoGen, CrewAI</li>
+                            <li><strong>Vector Databases:</strong> Pinecone, Weaviate, ChromaDB</li>
+                            <li><strong>Model Optimization:</strong> Quantization, Pruning, ONNX</li>
+                            <li><strong>MLOps:</strong> MLflow, Weights & Biases, DVC</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>Cloud & DevOps</h3>
+                        <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
                         <ul>
-                            <li>AWS AI Services</li>
-                            <li>Azure AI Platform</li>
-                            <li>Google Cloud AI</li>
-                            <li>Terraform</li>
+                            <li><strong>AWS AI Services:</strong> SageMaker, Bedrock, Rekognition, Comprehend</li>
+                            <li><strong>Azure AI Platform:</strong> Azure ML, Cognitive Services, OpenAI Service</li>
+                            <li><strong>Google Cloud AI:</strong> Vertex AI, AutoML, Vision API, Natural Language API</li>
+                            <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM Templates</li>
+                            <li><strong>Containerization:</strong> Docker, Kubernetes, Docker Compose</li>
+                            <li><strong>CI/CD:</strong> GitHub Actions, Azure DevOps, Jenkins</li>
+                            <li><strong>Monitoring:</strong> Grafana, Prometheus, CloudWatch, Application Insights</li>
+                            <li><strong>Databases:</strong> PostgreSQL, MongoDB, Redis, Elasticsearch</li>
+                            <li><strong>API Development:</strong> FastAPI, Flask, REST, GraphQL</li>
+                            <li><strong>Security:</strong> OAuth, JWT, SSL/TLS, IAM, Key Vault</li>
                         </ul>
                     </div>
                 </div>
