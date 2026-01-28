@@ -95,12 +95,13 @@ body {
 }
 
 .nav-logo .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
 }
 
 .nav-menu {
@@ -143,6 +144,50 @@ body {
     gap: 1rem;
 }
 
+.profile-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-profile-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+}
+
+.upload-btn {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
 .theme-toggle {
     background: none;
     border: 2px solid var(--border-color);
@@ -183,16 +228,24 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     background: radial-gradient(ellipse at center, #1a1a2e 0%, var(--bg-primary) 70%);
+    padding-left: 5%;
+}
+
+.hero-content {
+    text-align: left;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
 }
 
 .hero-stats {
     display: flex;
     gap: 2rem;
     margin: 2rem 0;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -1121,6 +1174,20 @@ body {
     .nav-actions {
         display: none;
     }
+    
+    .profile-image-container {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 2%;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
 
     .hero-title {
         font-size: 2.5rem;
@@ -1134,6 +1201,7 @@ body {
         flex-direction: column;
         gap: 1rem;
         width: 100%;
+        justify-content: center;
     }
 
     .about-content {

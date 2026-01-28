@@ -813,7 +813,42 @@ class ContactForm {
     }
 }
 
-// Resume Download Handler
+// Image Upload Handler
+class ImageUploader {
+    constructor() {
+        this.imageUpload = document.getElementById('image-upload');
+        this.profileImage = document.getElementById('profile-image');
+        this.init();
+    }
+
+    init() {
+        if (this.imageUpload && this.profileImage) {
+            this.imageUpload.addEventListener('change', (e) => this.handleImageUpload(e));
+            this.loadSavedImage();
+        }
+    }
+
+    handleImageUpload(event) {
+        const file = event.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const imageData = e.target.result;
+                this.profileImage.src = imageData;
+                // Save to localStorage
+                localStorage.setItem('profileImage', imageData);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    loadSavedImage() {
+        const savedImage = localStorage.getItem('profileImage');
+        if (savedImage) {
+            this.profileImage.src = savedImage;
+        }
+    }
+}
 class ResumeDownloader {
     constructor() {
         this.downloadBtn = document.getElementById('download-resume');
@@ -1064,6 +1099,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.demoModal = new DemoModal();
     window.contactForm = new ContactForm();
     window.resumeDownloader = new ResumeDownloader();
+    window.imageUploader = new ImageUploader();
     window.performanceMonitor = new PerformanceMonitor();
     
     // Initialize particle system
