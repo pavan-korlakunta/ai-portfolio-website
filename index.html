@@ -91,19 +91,9 @@
             background: rgba(59, 130, 246, 0.1);
         }
 
-        /* Right Sidebar */
+        /* Right Sidebar - Now integrated into main flow */
         .right-sidebar {
-            position: fixed;
-            top: 80px;
-            right: 0;
-            width: 320px;
-            height: calc(100vh - 80px);
-            background: rgba(30, 41, 59, 0.95);
-            backdrop-filter: blur(20px);
-            border-left: 1px solid rgba(148, 163, 184, 0.1);
-            padding: 2rem;
-            overflow-y: auto;
-            z-index: 999;
+            display: none; /* Hide the fixed sidebar */
         }
 
         .sidebar-card {
@@ -235,10 +225,9 @@
             color: #94a3b8;
         }
 
-        /* Main Content */
+        /* Main Content - Full width now */
         .main-content {
             margin-top: 80px;
-            margin-right: 320px;
             min-height: calc(100vh - 80px);
         }
 
@@ -355,6 +344,23 @@
             background: #3b82f6;
             color: white;
             transform: translateY(-2px);
+        }
+
+        /* Profile Info Section */
+        .profile-info {
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .profile-info-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .profile-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         /* Sections */
@@ -692,88 +698,12 @@
             border-top: 1px solid rgba(148, 163, 184, 0.1);
         }
 
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: #f1f5f9;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .mobile-sidebar-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1998;
-        }
-
-        .mobile-sidebar {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 300px;
-            height: 100vh;
-            background: rgba(30, 41, 59, 0.98);
-            backdrop-filter: blur(20px);
-            border-left: 1px solid rgba(148, 163, 184, 0.1);
-            padding: 2rem;
-            overflow-y: auto;
-            z-index: 1999;
-            transition: right 0.3s ease;
-        }
-
-        .mobile-sidebar.active {
-            right: 0;
-        }
-
-        .mobile-sidebar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-        }
-
-        .mobile-sidebar-close {
-            background: none;
-            border: none;
-            color: #f1f5f9;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
         /* Responsive */
-        @media (max-width: 1200px) {
-            .main-content {
-                margin-right: 0;
-            }
-            .right-sidebar {
-                display: none;
-            }
-            .mobile-menu-toggle {
-                display: block;
-            }
-            .mobile-sidebar {
-                display: block;
-            }
-        }
-
         @media (max-width: 768px) {
             .header-content {
-                flex-direction: row;
-                justify-content: space-between;
-                height: 80px;
-                padding: 0 1rem;
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
             }
             
             .profile-section {
@@ -790,15 +720,19 @@
             }
             
             .main-nav {
-                display: none;
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
             }
             
-            .mobile-menu-toggle {
-                display: block;
+            .nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
             }
             
             .main-content {
-                margin-top: 80px;
+                margin-top: 140px;
             }
             
             .hero-title {
@@ -826,7 +760,8 @@
             }
             
             .phases-grid,
-            .projects-grid {
+            .projects-grid,
+            .profile-cards-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -852,10 +787,6 @@
             
             .section-subtitle {
                 font-size: 1.1rem;
-            }
-            
-            .mobile-sidebar {
-                width: 280px;
             }
             
             .ai-tools-grid {
@@ -896,12 +827,13 @@
                 font-size: 2rem;
             }
             
-            .mobile-sidebar {
-                width: 260px;
-            }
-            
             .ai-tools-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .nav-link {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
             }
         }
 
@@ -939,166 +871,11 @@
                 <a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a>
                 <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
             </nav>
-            
-            <button class="mobile-menu-toggle" onclick="toggleMobileSidebar()">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
     <!-- Right Sidebar -->
     <aside class="right-sidebar">
-        <div class="sidebar-card linkedin-card">
-            <div class="sidebar-header">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </div>
-            <p style="color: #94a3b8; margin-bottom: 1rem; white-space: nowrap;">Connect professionally</p>
-            <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" class="sidebar-btn linkedin-btn">
-                <i class="fab fa-linkedin"></i> Connect
-            </a>
-        </div>
-
-        <div class="sidebar-card github-card">
-            <div class="sidebar-header">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </div>
-            <p style="color: #94a3b8; margin-bottom: 1rem;">View repositories</p>
-            <a href="https://github.com/pavan6570" target="_blank" class="sidebar-btn github-btn">
-                <i class="fab fa-github"></i> Follow
-            </a>
-        </div>
-
-        <div class="sidebar-card education-card">
-            <div class="sidebar-header">
-                <i class="fas fa-university"></i>
-                <span>Education</span>
-            </div>
-            <div class="education-item">
-                <h4>Master of Science in Computer Science</h4>
-                <p>Southeast Missouri State University</p>
-            </div>
-            <div class="education-item">
-                <h4>Bachelor of Technology in Information Technology</h4>
-                <p>Vasireddy Venkatadri Institute of Technology</p>
-            </div>
-        </div>
-
-        <!-- AI Tools & Platforms Card -->
-        <div class="sidebar-card ai-tools-card">
-            <div class="sidebar-header">
-                <i class="fas fa-robot"></i>
-                <span>AI Tools & Platforms</span>
-            </div>
-            
-            <!-- AI Chatbots Section -->
-            <div style="margin-bottom: 1.5rem;">
-                <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🤖 AI Chatbots</h5>
-                <div class="ai-tools-grid">
-                    <a href="https://chat.openai.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #10a37f;">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <span>ChatGPT</span>
-                    </a>
-                    <a href="https://gemini.google.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #4285f4;">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <span>Gemini</span>
-                    </a>
-                    <a href="https://claude.ai" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #d97706;">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <span>Claude</span>
-                    </a>
-                    <a href="https://copilot.microsoft.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #0078d4;">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <span>Copilot</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- AI Coding Tools Section -->
-            <div style="margin-bottom: 1.5rem;">
-                <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">💻 Free AI Coding Tools</h5>
-                <div class="ai-tools-grid">
-                    <a href="https://github.com/features/copilot" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #24292e;">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <span>GitHub Copilot</span>
-                    </a>
-                    <a href="https://codeium.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #09b6a2;">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <span>Codeium</span>
-                    </a>
-                    <a href="https://tabnine.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #4c9aff;">
-                            <i class="fas fa-magic"></i>
-                        </div>
-                        <span>Tabnine</span>
-                    </a>
-                    <a href="https://www.cursor.so" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #000;">
-                            <i class="fas fa-mouse-pointer"></i>
-                        </div>
-                        <span>Cursor</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Free AI Platforms Section -->
-            <div>
-                <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🆓 Free AI Platforms</h5>
-                <div class="ai-tools-grid">
-                    <a href="https://huggingface.co" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #ff9d00;">
-                            <i class="fas fa-smile"></i>
-                        </div>
-                        <span>Hugging Face</span>
-                    </a>
-                    <a href="https://colab.research.google.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #f9ab00;">
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <span>Google Colab</span>
-                    </a>
-                    <a href="https://www.kaggle.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #20beff;">
-                            <i class="fab fa-kaggle"></i>
-                        </div>
-                        <span>Kaggle</span>
-                    </a>
-                    <a href="https://replicate.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #000;">
-                            <i class="fas fa-copy"></i>
-                        </div>
-                        <span>Replicate</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Mobile Sidebar Overlay -->
-    <div class="mobile-sidebar-overlay" onclick="closeMobileSidebar()"></div>
-    
-    <!-- Mobile Sidebar -->
-    <aside class="mobile-sidebar" id="mobileSidebar">
-        <div class="mobile-sidebar-header">
-            <h3 style="color: #f1f5f9; margin: 0;">Menu</h3>
-            <button class="mobile-sidebar-close" onclick="closeMobileSidebar()">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        
         <div class="sidebar-card linkedin-card">
             <div class="sidebar-header">
                 <i class="fab fa-linkedin"></i>
@@ -1270,6 +1047,154 @@
                     <a href="#projects" class="btn btn-secondary">
                         <i class="fas fa-eye"></i> View Projects
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Info Section (Previously Sidebar) -->
+        <section class="section profile-info">
+            <div class="profile-info-container">
+                <div class="profile-cards-grid">
+                    <!-- LinkedIn Card -->
+                    <div class="sidebar-card linkedin-card">
+                        <div class="sidebar-header">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </div>
+                        <p style="color: #94a3b8; margin-bottom: 1rem;">Connect professionally</p>
+                        <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" class="sidebar-btn linkedin-btn">
+                            <i class="fab fa-linkedin"></i> Connect
+                        </a>
+                    </div>
+
+                    <!-- GitHub Card -->
+                    <div class="sidebar-card github-card">
+                        <div class="sidebar-header">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <p style="color: #94a3b8; margin-bottom: 1rem;">View repositories</p>
+                        <a href="https://github.com/pavan6570" target="_blank" class="sidebar-btn github-btn">
+                            <i class="fab fa-github"></i> Follow
+                        </a>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="sidebar-card education-card">
+                        <div class="sidebar-header">
+                            <i class="fas fa-university"></i>
+                            <span>Education</span>
+                        </div>
+                        <div class="education-item">
+                            <h4>Master of Science in Computer Science</h4>
+                            <p>Southeast Missouri State University</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Bachelor of Technology in Information Technology</h4>
+                            <p>Vasireddy Venkatadri Institute of Technology</p>
+                        </div>
+                    </div>
+
+                    <!-- AI Tools & Platforms Card -->
+                    <div class="sidebar-card ai-tools-card">
+                        <div class="sidebar-header">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Tools & Platforms</span>
+                        </div>
+                        
+                        <!-- AI Chatbots Section -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🤖 AI Chatbots</h5>
+                            <div class="ai-tools-grid">
+                                <a href="https://chat.openai.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #10a37f;">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <span>ChatGPT</span>
+                                </a>
+                                <a href="https://gemini.google.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #4285f4;">
+                                        <i class="fas fa-gem"></i>
+                                    </div>
+                                    <span>Gemini</span>
+                                </a>
+                                <a href="https://claude.ai" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #d97706;">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <span>Claude</span>
+                                </a>
+                                <a href="https://copilot.microsoft.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #0078d4;">
+                                        <i class="fab fa-microsoft"></i>
+                                    </div>
+                                    <span>Copilot</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- AI Coding Tools Section -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">💻 Free AI Coding Tools</h5>
+                            <div class="ai-tools-grid">
+                                <a href="https://github.com/features/copilot" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #24292e;">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <span>GitHub Copilot</span>
+                                </a>
+                                <a href="https://codeium.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #09b6a2;">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span>Codeium</span>
+                                </a>
+                                <a href="https://tabnine.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #4c9aff;">
+                                        <i class="fas fa-magic"></i>
+                                    </div>
+                                    <span>Tabnine</span>
+                                </a>
+                                <a href="https://www.cursor.so" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #000;">
+                                        <i class="fas fa-mouse-pointer"></i>
+                                    </div>
+                                    <span>Cursor</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Free AI Platforms Section -->
+                        <div>
+                            <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🆓 Free AI Platforms</h5>
+                            <div class="ai-tools-grid">
+                                <a href="https://huggingface.co" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #ff9d00;">
+                                        <i class="fas fa-smile"></i>
+                                    </div>
+                                    <span>Hugging Face</span>
+                                </a>
+                                <a href="https://colab.research.google.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #f9ab00;">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                    <span>Google Colab</span>
+                                </a>
+                                <a href="https://www.kaggle.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #20beff;">
+                                        <i class="fab fa-kaggle"></i>
+                                    </div>
+                                    <span>Kaggle</span>
+                                </a>
+                                <a href="https://replicate.com" target="_blank" class="ai-tool-item">
+                                    <div class="tool-icon" style="background: #000;">
+                                        <i class="fas fa-copy"></i>
+                                    </div>
+                                    <span>Replicate</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1705,34 +1630,6 @@
     </footer>
 
     <script>
-        // Mobile sidebar functions
-        function toggleMobileSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            const overlay = document.querySelector('.mobile-sidebar-overlay');
-            
-            if (sidebar.classList.contains('active')) {
-                closeMobileSidebar();
-            } else {
-                sidebar.classList.add('active');
-                overlay.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeMobileSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            const overlay = document.querySelector('.mobile-sidebar-overlay');
-            
-            sidebar.classList.remove('active');
-            overlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close mobile sidebar when clicking on navigation links
-        document.querySelectorAll('.mobile-sidebar .nav-link').forEach(link => {
-            link.addEventListener('click', closeMobileSidebar);
-        });
-
         // Smooth scrolling navigation
         document.querySelectorAll('.nav-link, .btn[href^="#"]').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -1788,15 +1685,8 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.phase-card, .project-card, .contact-item').forEach(el => {
+        document.querySelectorAll('.phase-card, .project-card, .contact-item, .sidebar-card').forEach(el => {
             observer.observe(el);
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 1200) {
-                closeMobileSidebar();
-            }
         });
     </script>
 </body>
