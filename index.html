@@ -3,1332 +3,1120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan Kumar Korlakunta - Senior AI Engineer & ML Expert | Atlanta, GA</title>
-    <meta name="description" content="Senior AI Engineer Pavan Kumar Korlakunta specializing in ML/DL, AI Agents, MLOps, Computer Vision, NLP. Atlanta-based expert in end-to-end AI solutions.">
-    <meta name="keywords" content="Pavan Kumar Korlakunta, AI Engineer Atlanta, Machine Learning Georgia, Deep Learning, AI Agents, MLOps, Computer Vision, NLP, TensorFlow, PyTorch, Python, Data Science">
-    <meta name="author" content="Pavan Kumar Korlakunta">
-    <meta property="og:title" content="Pavan - Senior AI Engineer & ML Expert">
-    <meta property="og:description" content="Senior AI Engineer specializing in AI Agents, MLOps, and end-to-end ML solutions">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Pavan Kumar Korlakunta - AI Expert & Machine Learning Engineer</title>
     
-    <link rel="stylesheet" href="styles-enhanced.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            height: 80px;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .profile-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #3b82f6;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            white-space: nowrap;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Right Sidebar */
+        .right-sidebar {
+            position: fixed;
+            top: 80px;
+            right: 0;
+            width: 300px;
+            height: calc(100vh - 80px);
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 2rem;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .sidebar-card {
+            background: rgba(51, 65, 85, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .sidebar-header i {
+            font-size: 1.25rem;
+        }
+
+        .linkedin-card .sidebar-header i { color: #0077b5; }
+        .github-card .sidebar-header i { color: #f1f5f9; }
+        .education-card .sidebar-header i { color: #3b82f6; }
+
+        .sidebar-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin-btn {
+            background: #0077b5;
+            color: white;
+        }
+
+        .linkedin-btn:hover {
+            background: #005885;
+            transform: translateY(-2px);
+        }
+
+        .github-btn {
+            background: #24292e;
+            color: white;
+        }
+
+        .github-btn:hover {
+            background: #000;
+            transform: translateY(-2px);
+        }
+
+        .education-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .education-item h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-item p {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            margin-right: 300px;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #f1f5f9;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 800px;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #3b82f6;
+            display: block;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #3b82f6;
+            border: 2px solid #3b82f6;
+        }
+
+        .btn-secondary:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #f1f5f9;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* About Section */
+        .about {
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            text-align: left;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(51, 65, 85, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .skill-category h3 {
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.75rem 0;
+            color: #94a3b8;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .skill-category li:hover {
+            color: #f1f5f9;
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* Learning Section */
+        .learning {
+            background: rgba(15, 23, 42, 0.5);
+        }
+
+        .phases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .phase-card {
+            background: rgba(51, 65, 85, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .phase-number {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .phase-card h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: #f1f5f9;
+            font-size: 1.25rem;
+        }
+
+        .phase-card p {
+            color: #94a3b8;
+            margin-bottom: 1rem;
+        }
+
+        .phase-card ul {
+            list-style: none;
+        }
+
+        .phase-card li {
+            padding: 0.5rem 0;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .phase-card li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(51, 65, 85, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .project-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-header h3 {
+            color: #f1f5f9;
+            font-size: 1.25rem;
+        }
+
+        .project-status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .project-status.active {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .project-status.completed {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-description {
+            color: #94a3b8;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #60a5fa;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: rgba(15, 23, 42, 0.5);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(51, 65, 85, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .contact-form {
+            background: rgba(51, 65, 85, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgba(30, 41, 59, 0.5);
+            color: #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #64748b;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(15, 23, 42, 0.95);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .main-content {
+                margin-right: 0;
+            }
+            .right-sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+            
+            .main-nav {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .main-content {
+                margin-top: 140px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .phases-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Pavan Kumar Korlakunta</span>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="profile-section">
+                <img src="assets/profile-image.jpg" alt="Pavan Kumar Korlakunta" class="profile-image" 
+                     onerror="this.src='https://via.placeholder.com/60x60/3b82f6/ffffff?text=PK'">
+                <h1 class="profile-name">Pavan Kumar Korlakunta</h1>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#learning-path" class="nav-link">AI Learning</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#expertise" class="nav-link">Expertise</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-actions">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <a href="#resume" class="btn btn-outline-small">Resume</a>
-                <div class="profile-image-container">
-                    <img src="https://via.placeholder.com/50x50/667eea/ffffff?text=PK" alt="Pavan Kumar Korlakunta" class="nav-profile-image" id="profile-image">
-                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
-                    <button class="upload-btn" onclick="document.getElementById('image-upload').click()">
-                        <i class="fas fa-camera"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            
+            <nav class="main-nav">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
+                <a href="#learning" class="nav-link"><i class="fas fa-graduation-cap"></i> AI Learning</a>
+                <a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="particles-container">
-            <canvas id="particles-canvas"></canvas>
+    <!-- Right Sidebar -->
+    <aside class="right-sidebar">
+        <div class="sidebar-card linkedin-card">
+            <div class="sidebar-header">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </div>
+            <p style="color: #94a3b8; margin-bottom: 1rem;">Connect professionally</p>
+            <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" class="sidebar-btn linkedin-btn">
+                <i class="fab fa-linkedin"></i> Connect
+            </a>
         </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="typing-text">Hello, I'm</span>
-                    <br>
-                    <span class="name-highlight">Pavan Kumar Korlakunta</span>
-                </h1>
-                <p class="hero-subtitle">AI Expert & Full-Stack ML Engineer | Your AI Learning Guide</p>
+
+        <div class="sidebar-card github-card">
+            <div class="sidebar-header">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </div>
+            <p style="color: #94a3b8; margin-bottom: 1rem;">View repositories</p>
+            <a href="https://github.com/pavan6570" target="_blank" class="sidebar-btn github-btn">
+                <i class="fab fa-github"></i> Follow
+            </a>
+        </div>
+
+        <div class="sidebar-card education-card">
+            <div class="sidebar-header">
+                <i class="fas fa-university"></i>
+                <span>Education</span>
+            </div>
+            <div class="education-item">
+                <h4>Master of Science in Computer Science</h4>
+                <p>Southeast Missouri State University (2022-2024)</p>
+            </div>
+            <div class="education-item">
+                <h4>Bachelor of Technology in IT</h4>
+                <p>Vasireddy Venkatadri Institute of Technology (2018-2022)</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">AI Expert & Machine Learning Engineer</h2>
+                <p class="hero-subtitle">Transforming Ideas into Intelligent Solutions</p>
                 <p class="hero-description">
-                    Master of the complete AI ecosystem - from basic programming to advanced deployment. 
-                    I've created this platform to share my expertise in Data Science, ML, Deep Learning, 
-                    AI Agents, and Cloud AI across AWS, Azure, and GCP. Let's learn AI together, step by step!
+                    Specializing in Machine Learning, Deep Learning, Computer Vision, and NLP with 3+ years 
+                    of experience across the complete AI ecosystem. Based in Atlanta, Georgia.
                 </p>
                 <div class="hero-stats">
-                    <div class="hero-stat">
+                    <div class="stat-item">
                         <span class="stat-number">3+</span>
-                        <span class="stat-text">Years Experience</span>
+                        <span class="stat-label">Years Experience</span>
                     </div>
-                    <div class="hero-stat">
+                    <div class="stat-item">
                         <span class="stat-number">50+</span>
-                        <span class="stat-text">Learning Resources</span>
+                        <span class="stat-label">AI Resources</span>
                     </div>
-                    <div class="hero-stat">
+                    <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-text">Free Content</span>
+                        <span class="stat-label">Free Learning</span>
                     </div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#learning-path" class="btn btn-primary">
-                        <i class="fas fa-graduation-cap"></i>
-                        Start Learning AI
+                    <a href="#learning" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Start Learning AI
                     </a>
                     <a href="#projects" class="btn btn-secondary">
-                        <i class="fas fa-rocket"></i>
-                        View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-comments"></i>
-                        Get Mentorship
+                        <i class="fas fa-eye"></i> View Projects
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- AI Learning Path Section -->
-    <section id="learning-path" class="learning-path">
-        <div class="container">
-            <h2 class="section-title">Complete AI Learning Journey</h2>
-            <p class="section-subtitle">From Zero to AI Expert - A structured path I've designed based on my experience</p>
-            
-            <div class="learning-phases">
-                <div class="phase-card" data-phase="1">
-                    <div class="phase-header">
-                        <div class="phase-number">01</div>
-                        <h3>Programming Foundation</h3>
-                        <p>Master the essential programming languages for AI</p>
-                    </div>
-                    <div class="phase-content">
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Python Programming</h4>
-                                <p>Core language for AI/ML development</p>
-                                <div class="difficulty">Beginner</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://python.org/about/gettingstarted/" target="_blank" class="learn-link">
-                                    <i class="fas fa-external-link-alt"></i> Official Tutorial
-                                </a>
-                                <a href="https://www.codecademy.com/learn/learn-python-3" target="_blank" class="learn-link">
-                                    <i class="fas fa-code"></i> Interactive Course
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>SQL & Databases</h4>
-                                <p>Essential for data manipulation and storage</p>
-                                <div class="difficulty">Beginner</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://www.w3schools.com/sql/" target="_blank" class="learn-link">
-                                    <i class="fas fa-database"></i> SQL Tutorial
-                                </a>
-                                <a href="https://sqlbolt.com/" target="_blank" class="learn-link">
-                                    <i class="fas fa-play"></i> Interactive SQL
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>R Programming</h4>
-                                <p>Statistical computing and data analysis</p>
-                                <div class="difficulty">Intermediate</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://www.r-project.org/about.html" target="_blank" class="learn-link">
-                                    <i class="fas fa-chart-bar"></i> R Official
-                                </a>
-                                <a href="https://www.datacamp.com/courses/free-introduction-to-r" target="_blank" class="learn-link">
-                                    <i class="fas fa-graduation-cap"></i> DataCamp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="phase-card" data-phase="2">
-                    <div class="phase-header">
-                        <div class="phase-number">02</div>
-                        <h3>Data Science Fundamentals</h3>
-                        <p>Statistics, data analysis, and visualization</p>
-                    </div>
-                    <div class="phase-content">
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Statistics & Mathematics</h4>
-                                <p>Foundation for understanding ML algorithms</p>
-                                <div class="difficulty">Intermediate</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" class="learn-link">
-                                    <i class="fas fa-calculator"></i> Khan Academy
-                                </a>
-                                <a href="https://www.coursera.org/learn/stanford-statistics" target="_blank" class="learn-link">
-                                    <i class="fas fa-university"></i> Stanford Course
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Pandas & NumPy</h4>
-                                <p>Data manipulation and numerical computing</p>
-                                <div class="difficulty">Beginner</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://pandas.pydata.org/docs/getting_started/index.html" target="_blank" class="learn-link">
-                                    <i class="fas fa-table"></i> Pandas Docs
-                                </a>
-                                <a href="https://numpy.org/learn/" target="_blank" class="learn-link">
-                                    <i class="fas fa-square-root-alt"></i> NumPy Learn
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Data Visualization</h4>
-                                <p>Matplotlib, Seaborn, Plotly for insights</p>
-                                <div class="difficulty">Beginner</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://matplotlib.org/stable/tutorials/index.html" target="_blank" class="learn-link">
-                                    <i class="fas fa-chart-line"></i> Matplotlib
-                                </a>
-                                <a href="https://seaborn.pydata.org/tutorial.html" target="_blank" class="learn-link">
-                                    <i class="fas fa-palette"></i> Seaborn
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="phase-card" data-phase="3">
-                    <div class="phase-header">
-                        <div class="phase-number">03</div>
-                        <h3>Machine Learning</h3>
-                        <p>Classical ML algorithms and techniques</p>
-                    </div>
-                    <div class="phase-content">
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Scikit-learn</h4>
-                                <p>Complete ML library for Python</p>
-                                <div class="difficulty">Intermediate</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://scikit-learn.org/stable/getting_started.html" target="_blank" class="learn-link">
-                                    <i class="fas fa-cogs"></i> Official Guide
-                                </a>
-                                <a href="https://www.coursera.org/learn/machine-learning" target="_blank" class="learn-link">
-                                    <i class="fas fa-brain"></i> Andrew Ng Course
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Ensemble Methods</h4>
-                                <p>XGBoost, Random Forest, LightGBM</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://xgboost.readthedocs.io/en/stable/" target="_blank" class="learn-link">
-                                    <i class="fas fa-tree"></i> XGBoost Docs
-                                </a>
-                                <a href="https://lightgbm.readthedocs.io/en/latest/" target="_blank" class="learn-link">
-                                    <i class="fas fa-bolt"></i> LightGBM
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="phase-card" data-phase="4">
-                    <div class="phase-header">
-                        <div class="phase-number">04</div>
-                        <h3>Deep Learning</h3>
-                        <p>Neural networks and advanced architectures</p>
-                    </div>
-                    <div class="phase-content">
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>TensorFlow & Keras</h4>
-                                <p>Google's deep learning framework</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://www.tensorflow.org/learn" target="_blank" class="learn-link">
-                                    <i class="fas fa-brain"></i> TensorFlow Learn
-                                </a>
-                                <a href="https://www.deeplearning.ai/courses/" target="_blank" class="learn-link">
-                                    <i class="fas fa-graduation-cap"></i> DeepLearning.AI
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>PyTorch</h4>
-                                <p>Facebook's research-focused framework</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://pytorch.org/tutorials/" target="_blank" class="learn-link">
-                                    <i class="fas fa-fire"></i> PyTorch Tutorials
-                                </a>
-                                <a href="https://www.fast.ai/" target="_blank" class="learn-link">
-                                    <i class="fas fa-rocket"></i> Fast.ai Course
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="phase-card" data-phase="5">
-                    <div class="phase-header">
-                        <div class="phase-number">05</div>
-                        <h3>Specialized AI Domains</h3>
-                        <p>Computer Vision, NLP, and AI Agents</p>
-                    </div>
-                    <div class="phase-content">
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Computer Vision</h4>
-                                <p>OpenCV, YOLO, image processing</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://opencv.org/courses/" target="_blank" class="learn-link">
-                                    <i class="fas fa-eye"></i> OpenCV Courses
-                                </a>
-                                <a href="https://www.coursera.org/learn/convolutional-neural-networks" target="_blank" class="learn-link">
-                                    <i class="fas fa-camera"></i> CNN Course
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Natural Language Processing</h4>
-                                <p>NLTK, spaCy, Transformers, LLMs</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://huggingface.co/course/chapter1/1" target="_blank" class="learn-link">
-                                    <i class="fas fa-comments"></i> HuggingFace Course
-                                </a>
-                                <a href="https://www.nltk.org/book/" target="_blank" class="learn-link">
-                                    <i class="fas fa-book"></i> NLTK Book
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>AI Agents & LangChain</h4>
-                                <p>Building intelligent autonomous systems</p>
-                                <div class="difficulty">Expert</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://python.langchain.com/docs/get_started/introduction" target="_blank" class="learn-link">
-                                    <i class="fas fa-robot"></i> LangChain Docs
-                                </a>
-                                <a href="https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/" target="_blank" class="learn-link">
-                                    <i class="fas fa-link"></i> LangChain Course
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="phase-card" data-phase="6">
-                    <div class="phase-header">
-                        <div class="phase-number">06</div>
-                        <h3>Cloud AI & Deployment</h3>
-                        <p>AWS, Azure, GCP, and MLOps</p>
-                    </div>
-                    <div class="phase-content">
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>AWS AI Services</h4>
-                                <p>SageMaker, Lambda, EC2 for ML</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://aws.amazon.com/training/learn-about/machine-learning/" target="_blank" class="learn-link">
-                                    <i class="fab fa-aws"></i> AWS ML Training
-                                </a>
-                                <a href="https://www.coursera.org/learn/aws-machine-learning" target="_blank" class="learn-link">
-                                    <i class="fas fa-cloud"></i> AWS ML Course
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Azure AI Platform</h4>
-                                <p>Azure ML Studio, Cognitive Services</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://docs.microsoft.com/en-us/azure/machine-learning/" target="_blank" class="learn-link">
-                                    <i class="fab fa-microsoft"></i> Azure ML Docs
-                                </a>
-                                <a href="https://www.coursera.org/learn/microsoft-azure-machine-learning" target="_blank" class="learn-link">
-                                    <i class="fas fa-graduation-cap"></i> Azure ML Course
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Google Cloud AI</h4>
-                                <p>Vertex AI, AutoML, AI Platform</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://cloud.google.com/ai-platform/docs" target="_blank" class="learn-link">
-                                    <i class="fab fa-google"></i> GCP AI Docs
-                                </a>
-                                <a href="https://www.coursera.org/learn/gcp-machine-learning" target="_blank" class="learn-link">
-                                    <i class="fas fa-cloud-upload-alt"></i> GCP ML Course
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>Infrastructure as Code</h4>
-                                <p>Terraform for cloud resource management</p>
-                                <div class="difficulty">Advanced</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://learn.hashicorp.com/terraform" target="_blank" class="learn-link">
-                                    <i class="fas fa-cubes"></i> Terraform Learn
-                                </a>
-                                <a href="https://www.terraform.io/docs" target="_blank" class="learn-link">
-                                    <i class="fas fa-book"></i> Terraform Docs
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learning-item">
-                            <div class="item-info">
-                                <h4>MLOps & Production</h4>
-                                <p>Docker, Kubernetes, CI/CD for ML</p>
-                                <div class="difficulty">Expert</div>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://mlops.org/" target="_blank" class="learn-link">
-                                    <i class="fas fa-cogs"></i> MLOps Community
-                                </a>
-                                <a href="https://www.coursera.org/learn/machine-learning-engineering-for-production-mlops" target="_blank" class="learn-link">
-                                    <i class="fas fa-industry"></i> MLOps Course
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="learning-cta">
-                <h3>Ready to Start Your AI Journey?</h3>
-                <p>Follow this structured path and you'll master AI from basics to advanced deployment!</p>
-                <a href="#contact" class="btn btn-primary btn-large">
-                    <i class="fas fa-rocket"></i>
-                    Get Personal Mentorship
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
+        <!-- About Section -->
+        <section id="about" class="section about">
             <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">AI Expert & Educator from Atlanta, Georgia</p>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">
+                    <p>
                         I'm Pavan Kumar Korlakunta, an AI Expert and passionate educator based in Atlanta, Georgia. 
-                        With 3+ years of hands-on experience across the complete AI ecosystem, I've mastered everything 
-                        from basic programming to advanced cloud deployment on AWS, Azure, and GCP.
+                        With a Master's in Computer Science from Southeast Missouri State University and 3+ years 
+                        of hands-on experience, I specialize in the complete AI ecosystem.
                     </p>
-                    <p class="about-details">
-                        My mission is simple: <strong>Make AI accessible to everyone.</strong> I believe that with the right 
-                        guidance and structured learning path, anyone can master AI. That's why I've created this comprehensive 
-                        learning platform - to share my knowledge and help aspiring AI engineers succeed in their journey.
+                    <p>
+                        My expertise spans Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, 
+                        Data Science, AI Agents, and MLOps. I'm proficient in cloud platforms including AWS, Azure, 
+                        and GCP, with infrastructure management using Terraform.
                     </p>
-                    
-                    <div class="expertise-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>Complete AI Curriculum</h4>
-                                <p>Structured learning path from programming basics to advanced deployment</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-cloud"></i>
-                            <div>
-                                <h4>Multi-Cloud Expertise</h4>
-                                <p>AWS, Azure, GCP deployment with Terraform infrastructure management</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-hands-helping"></i>
-                            <div>
-                                <h4>Mentorship & Guidance</h4>
-                                <p>Personal mentoring to help you navigate your AI learning journey</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Learning Resources</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">Learning Phases</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Free Content</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                    </div>
                 </div>
-                <div class="about-visual">
-                    <div class="ai-brain">
-                        <div class="neural-network">
-                            <div class="node"></div>
-                            <div class="node"></div>
-                            <div class="node"></div>
-                            <div class="node"></div>
-                            <div class="node"></div>
-                            <div class="node"></div>
-                            <div class="connection"></div>
-                            <div class="connection"></div>
-                            <div class="connection"></div>
-                            <div class="connection"></div>
-                        </div>
-                        <div class="brain-pulse"></div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>AI & Machine Learning</h3>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Natural Language Processing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & DevOps</h3>
+                        <ul>
+                            <li>AWS AI Services</li>
+                            <li>Azure AI Platform</li>
+                            <li>Google Cloud AI</li>
+                            <li>Terraform</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- AI Expertise Section -->
-    <section id="expertise" class="expertise">
-        <div class="container">
-            <h2 class="section-title">Complete AI Expertise Spectrum</h2>
-            <p class="section-subtitle">Mastering every aspect of AI - from foundational data science to cutting-edge AI agents</p>
-            
-            <div class="expertise-timeline">
-                <div class="timeline-item" data-level="foundation">
-                    <div class="timeline-marker">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Data Science Foundation</h3>
-                        <p>Statistical analysis, data preprocessing, feature engineering, exploratory data analysis, hypothesis testing</p>
-                        <div class="tech-stack">
-                            <span>Python</span><span>R</span><span>SQL</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
-                        </div>
-                    </div>
+        <!-- AI Learning Section -->
+        <section id="learning" class="section learning">
+            <h2 class="section-title">AI Learning Path</h2>
+            <p class="section-subtitle">Comprehensive curriculum from basics to advanced deployment</p>
+            <div class="phases-grid">
+                <div class="phase-card">
+                    <div class="phase-number">01</div>
+                    <h3>Programming Foundations</h3>
+                    <p>Python, R, SQL, Git fundamentals</p>
+                    <ul>
+                        <li>Python Programming</li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Version Control with Git</li>
+                    </ul>
                 </div>
-                
-                <div class="timeline-item" data-level="ml">
-                    <div class="timeline-marker">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Machine Learning Mastery</h3>
-                        <p>Classical ML algorithms, ensemble methods, hyperparameter tuning, model evaluation, feature selection</p>
-                        <div class="tech-stack">
-                            <span>Scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>CatBoost</span><span>Random Forest</span>
-                        </div>
-                    </div>
+                <div class="phase-card">
+                    <div class="phase-number">02</div>
+                    <h3>Data Science & Analytics</h3>
+                    <p>Statistics, data analysis, visualization</p>
+                    <ul>
+                        <li>Statistical Analysis</li>
+                        <li>Pandas & NumPy</li>
+                        <li>Data Visualization</li>
+                    </ul>
                 </div>
-                
-                <div class="timeline-item" data-level="dl">
-                    <div class="timeline-marker">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Deep Learning & Neural Networks</h3>
-                        <p>CNNs, RNNs, Transformers, GANs, autoencoders, transfer learning, custom architectures</p>
-                        <div class="tech-stack">
-                            <span>TensorFlow</span><span>PyTorch</span><span>Keras</span><span>Hugging Face</span><span>CUDA</span>
-                        </div>
-                    </div>
+                <div class="phase-card">
+                    <div class="phase-number">03</div>
+                    <h3>Machine Learning</h3>
+                    <p>Supervised, unsupervised learning</p>
+                    <ul>
+                        <li>Scikit-learn</li>
+                        <li>Model Selection</li>
+                        <li>Feature Engineering</li>
+                    </ul>
                 </div>
-                
-                <div class="timeline-item" data-level="mlops">
-                    <div class="timeline-marker">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>MLOps & Production</h3>
-                        <p>Model deployment, monitoring, CI/CD pipelines, containerization, cloud platforms, model versioning</p>
-                        <div class="tech-stack">
-                            <span>Docker</span><span>Kubernetes</span><span>MLflow</span><span>AWS</span><span>GCP</span><span>Jenkins</span>
-                        </div>
-                    </div>
+                <div class="phase-card">
+                    <div class="phase-number">04</div>
+                    <h3>Deep Learning</h3>
+                    <p>Neural networks, TensorFlow, PyTorch</p>
+                    <ul>
+                        <li>Neural Networks</li>
+                        <li>CNN & RNN</li>
+                        <li>Transfer Learning</li>
+                    </ul>
                 </div>
-                
-                <div class="timeline-item" data-level="cv-nlp">
-                    <div class="timeline-marker">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Computer Vision & NLP</h3>
-                        <p>Object detection, image classification, OCR, sentiment analysis, text generation, language models</p>
-                        <div class="tech-stack">
-                            <span>OpenCV</span><span>YOLO</span><span>BERT</span><span>GPT</span><span>spaCy</span><span>NLTK</span>
-                        </div>
-                    </div>
+                <div class="phase-card">
+                    <div class="phase-number">05</div>
+                    <h3>Specialized AI</h3>
+                    <p>Computer Vision, NLP, AI Agents</p>
+                    <ul>
+                        <li>Computer Vision</li>
+                        <li>Natural Language Processing</li>
+                        <li>AI Agents & LLMs</li>
+                    </ul>
                 </div>
-                
-                <div class="timeline-item" data-level="agents">
-                    <div class="timeline-marker">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>AI Agents & Advanced Systems</h3>
-                        <p>Multi-agent systems, LangChain, RAG, fine-tuning, prompt engineering, autonomous agents</p>
-                        <div class="tech-stack">
-                            <span>LangChain</span><span>AutoGen</span><span>CrewAI</span><span>OpenAI</span><span>Anthropic</span><span>Pinecone</span>
-                        </div>
-                    </div>
+                <div class="phase-card">
+                    <div class="phase-number">06</div>
+                    <h3>MLOps & Deployment</h3>
+                    <p>Cloud deployment, monitoring</p>
+                    <ul>
+                        <li>Model Deployment</li>
+                        <li>Cloud Platforms</li>
+                        <li>Monitoring & Scaling</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
             <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Real-world AI solutions that drive business impact</p>
-            
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="agents">AI Agents</button>
-                <button class="filter-btn" data-filter="mlops">MLOps</button>
-                <button class="filter-btn" data-filter="cv">Computer Vision</button>
-                <button class="filter-btn" data-filter="nlp">NLP</button>
-            </div>
-            
+            <p class="section-subtitle">Real-world AI solutions and implementations</p>
             <div class="projects-grid">
-                <div class="project-card" data-category="agents">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="demo-btn" onclick="openDemo('multi-agent')">
-                                <i class="fas fa-play"></i> Live Demo
-                            </button>
-                        </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AI Learning Platform</h3>
+                        <span class="project-status active">Active</span>
                     </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Intelligent Document Processing System</h3>
-                            <div class="project-status">
-                                <span class="status-badge production">Production</span>
-                            </div>
-                        </div>
+                    <div class="project-body">
                         <p class="project-description">
-                            Built an end-to-end document processing system using OCR, NLP, and ML classification. 
-                            Automated document extraction and categorization with 94% accuracy, reducing manual processing time by 75%.
+                            Comprehensive learning platform with structured AI curriculum and progress tracking.
                         </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">94%</span>
-                                <span class="metric-label">Accuracy</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">75%</span>
-                                <span class="metric-label">Time Reduction</span>
-                            </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
                         </div>
-                        <div class="project-tech">
+                        <a href="https://github.com/pavan6570/ai-portfolio-website" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ML Model Pipeline</h3>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            End-to-end machine learning pipeline with automated model selection and deployment.
+                        </p>
+                        <div class="tech-tags">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Tesseract OCR</span>
-                            <span class="tech-tag">spaCy</span>
                             <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Demo
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-alt"></i>
-                                Case Study
-                            </a>
-                        </div>
+                        <a href="https://github.com/pavan6570" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
                     </div>
                 </div>
-
-                <div class="project-card" data-category="mlops">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-infinity"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="demo-btn" onclick="openDemo('mlops-pipeline')">
-                                <i class="fas fa-play"></i> Architecture
-                            </button>
-                        </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Computer Vision System</h3>
+                        <span class="project-status completed">Completed</span>
                     </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Predictive Analytics Dashboard</h3>
-                            <div class="project-status">
-                                <span class="status-badge production">Production</span>
-                            </div>
-                        </div>
+                    <div class="project-body">
                         <p class="project-description">
-                            Developed a comprehensive ML pipeline for sales forecasting and customer behavior prediction. 
-                            Integrated multiple algorithms with automated model selection achieving 92% prediction accuracy.
+                            Deep learning system for image classification and object detection using CNN architectures.
                         </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">92%</span>
-                                <span class="metric-label">Accuracy</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">50K+</span>
-                                <span class="metric-label">Daily Predictions</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">XGBoost</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-chart-line"></i>
-                                Metrics
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-alt"></i>
-                                Documentation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="cv">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="demo-btn" onclick="openDemo('real-time-cv')">
-                                <i class="fas fa-play"></i> Live Demo
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Smart Image Classification System</h3>
-                            <div class="project-status">
-                                <span class="status-badge production">Production</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Built a deep learning system for automated image classification and quality control using 
-                            CNN architectures. Achieved 96% accuracy with real-time processing capabilities.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">96%</span>
-                                <span class="metric-label">Accuracy</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">15</span>
-                                <span class="metric-label">FPS</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
+                        <div class="tech-tags">
                             <span class="tech-tag">TensorFlow</span>
                             <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">CNN</span>
-                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Python</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-video"></i>
-                                Demo Video
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-alt"></i>
-                                Paper
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="nlp">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="demo-btn" onclick="openDemo('rag-system')">
-                                <i class="fas fa-play"></i> Try It
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Enterprise RAG System</h3>
-                            <div class="project-status">
-                                <span class="status-badge production">Production</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Advanced RAG system with custom embeddings and retrieval optimization. Handles 10K+ 
-                            documents with sub-second response times and 94% user satisfaction.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">94%</span>
-                                <span class="metric-label">User Satisfaction</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">&lt;1s</span>
-                                <span class="metric-label">Response Time</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">Pinecone</span>
-                            <span class="tech-tag">Transformers</span>
-                            <span class="tech-tag">FastAPI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Demo
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-chart-bar"></i>
-                                Benchmarks
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="agents">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="demo-btn" onclick="openDemo('trading-agent')">
-                                <i class="fas fa-play"></i> Backtest
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">AI Trading Agent</h3>
-                            <div class="project-status">
-                                <span class="status-badge beta">Beta</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Autonomous trading agent using reinforcement learning and sentiment analysis. 
-                            Achieved 23% annual return with 0.8 Sharpe ratio in backtesting.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">23%</span>
-                                <span class="metric-label">Annual Return</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">0.8</span>
-                                <span class="metric-label">Sharpe Ratio</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Stable Baselines3</span>
-                            <span class="tech-tag">FinRL</span>
-                            <span class="tech-tag">Alpaca API</span>
-                            <span class="tech-tag">PyTorch</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-chart-line"></i>
-                                Backtest Results
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-alt"></i>
-                                Strategy Paper
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="mlops">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <button class="demo-btn" onclick="openDemo('fraud-detection')">
-                                <i class="fas fa-play"></i> Test Model
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Real-time Fraud Detection</h3>
-                            <div class="project-status">
-                                <span class="status-badge production">Production</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            ML system for real-time fraud detection processing 100K+ transactions/minute. 
-                            Reduced false positives by 60% while maintaining 99.8% fraud catch rate.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">99.8%</span>
-                                <span class="metric-label">Fraud Detection</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">60%</span>
-                                <span class="metric-label">False Positive Reduction</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">XGBoost</span>
-                            <span class="tech-tag">Apache Kafka</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Kubernetes</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-tachometer-alt"></i>
-                                Performance
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-alt"></i>
-                                Case Study
-                            </a>
-                        </div>
+                        <a href="https://github.com/pavan6570" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">AI Insights & Articles</h2>
-            <p class="section-subtitle">Sharing knowledge and insights from the AI frontier</p>
-            
-            <div class="blog-grid">
-                <article class="blog-card featured">
-                    <div class="blog-image">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGF5aWRlbnRHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjY3ZWVhO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM3NjRiYTI7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+" alt="AI Agents Architecture">
-                        <div class="blog-category">Featured</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                Jan 15, 2024
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                8 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">Building Production-Ready AI Agents: A Complete Guide</h3>
-                        <p class="blog-excerpt">
-                            Deep dive into architecting multi-agent systems that scale. From design patterns 
-                            to deployment strategies, learn how to build AI agents that work in production.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">AI Agents</span>
-                            <span class="blog-tag">LangChain</span>
-                            <span class="blog-tag">Production</span>
-                        </div>
-                        <a href="#" class="blog-link">
-                            Read Article <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSJ1cmwoI2dyYWRpZW50MikiLz4KPGR5Zz4KPGF5aWRlbnRHcmFkaWVudCBpZD0iZ3JhZGllbnQyIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzQzYTA0NztzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMmU3ZDMyO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPg==" alt="MLOps Pipeline">
-                        <div class="blog-category">MLOps</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                Jan 8, 2024
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                6 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">MLOps Best Practices: From Model to Production</h3>
-                        <p class="blog-excerpt">
-                            Essential MLOps practices for deploying ML models at scale. CI/CD pipelines, 
-                            monitoring, and infrastructure patterns that ensure reliable ML systems.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">MLOps</span>
-                            <span class="blog-tag">Kubernetes</span>
-                            <span class="blog-tag">CI/CD</span>
-                        </div>
-                        <a href="#" class="blog-link">
-                            Read Article <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSJ1cmwoI2dyYWRpZW50MykiLz4KPGR5Zz4KPGF5aWRlbnRHcmFkaWVudCBpZD0iZ3JhZGllbnQzIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2Y1OTE1Mztzdg9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZWQ2YzAyO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPg==" alt="RAG Systems">
-                        <div class="blog-category">NLP</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                Dec 28, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                10 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">Advanced RAG Techniques for Enterprise Applications</h3>
-                        <p class="blog-excerpt">
-                            Exploring advanced RAG architectures, embedding optimization, and retrieval 
-                            strategies for building enterprise-grade question-answering systems.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">RAG</span>
-                            <span class="blog-tag">LLMs</span>
-                            <span class="blog-tag">Embeddings</span>
-                        </div>
-                        <a href="#" class="blog-link">
-                            Read Article <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="blog-cta">
-                <a href="#" class="btn btn-primary">
-                    <i class="fas fa-rss"></i>
-                    View All Articles
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Build Something Amazing</h2>
-            <p class="section-subtitle">Ready to discuss your next AI project? Let's connect!</p>
-            
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to collaborate or need AI mentorship?</p>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>
-                        I'm always excited to discuss innovative AI projects, potential collaborations, 
-                        and opportunities to solve complex problems with cutting-edge technology.
-                    </p>
-                    
-                    <div class="contact-methods">
-                        <a href="mailto:kpkmlengineer@gmail.com" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">kpkmlengineer@gmail.com</span>
-                            </div>
-                        </a>
-                        
-                        <a href="tel:+13464957852" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Phone</span>
-                                <span class="contact-value">+1 (346) 495-7852</span>
-                            </div>
-                        </a>
-                        
-                        <a href="#linkedin-placeholder" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">LinkedIn</span>
-                                <span class="contact-value">Connect with me</span>
-                            </div>
-                        </a>
-                        
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Atlanta, Georgia</span>
-                            </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: #f1f5f9; margin-bottom: 0.25rem;">Email</h3>
+                            <p style="color: #94a3b8; margin: 0;">kpkmlengineer@gmail.com</p>
                         </div>
                     </div>
-                    
-                    <div class="availability-status">
-                        <div class="status-indicator available"></div>
-                        <span>Available for new projects</span>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: #f1f5f9; margin-bottom: 0.25rem;">Phone</h3>
+                            <p style="color: #94a3b8; margin: 0;">+1 (346) 495-7852</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: #f1f5f9; margin-bottom: 0.25rem;">Location</h3>
+                            <p style="color: #94a3b8; margin: 0;">Atlanta, Georgia, USA</p>
+                        </div>
                     </div>
                 </div>
-                
                 <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company">
+                            <input type="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="project-type">Project Type</label>
-                            <select id="project-type" name="project-type">
-                                <option value="">Select project type</option>
-                                <option value="ai-agents">AI Agents Development</option>
-                                <option value="mlops">MLOps Implementation</option>
-                                <option value="computer-vision">Computer Vision</option>
-                                <option value="nlp">NLP Solutions</option>
+                            <select>
+                                <option value="">Select Subject</option>
+                                <option value="mentorship">AI Mentorship</option>
+                                <option value="collaboration">Collaboration</option>
                                 <option value="consulting">AI Consulting</option>
-                                <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Project Details *</label>
-                            <textarea id="message" name="message" rows="5" required 
-                                placeholder="Tell me about your project, challenges, and goals..."></textarea>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Resume Download Section -->
-    <section id="resume" class="resume-section">
-        <div class="container">
-            <div class="resume-content">
-                <div class="resume-info">
-                    <h3>Download My Resume</h3>
-                    <p>Get a comprehensive overview of my experience, skills, and achievements in AI/ML.</p>
-                    <div class="resume-highlights">
-                        <div class="highlight">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Advanced AI/ML Education</span>
-                        </div>
-                        <div class="highlight">
-                            <i class="fas fa-briefcase"></i>
-                            <span>5+ Years Industry Experience</span>
-                        </div>
-                        <div class="highlight">
-                            <i class="fas fa-certificate"></i>
-                            <span>Professional Certifications</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-actions">
-                    <a href="#" class="btn btn-primary" id="download-resume">
-                        <i class="fas fa-download"></i>
-                        Download PDF Resume
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        <i class="fas fa-eye"></i>
-                        Preview Online
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Pavan Kumar Korlakunta</h4>
-                    <p>Senior AI Engineer specializing in full-stack ML solutions and intelligent systems. Based in Atlanta, Georgia.</p>
-                    <div class="social-links">
-                        <a href="#github-placeholder" class="social-link" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#linkedin-placeholder" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:kpkmlengineer@gmail.com" class="social-link" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="tel:+13464957852" class="social-link" aria-label="Phone">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#expertise">Expertise</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">AI Agent Development</a></li>
-                        <li><a href="#">MLOps Implementation</a></li>
-                        <li><a href="#">Computer Vision</a></li>
-                        <li><a href="#">NLP Solutions</a></li>
-                        <li><a href="#">AI Consulting</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Latest Articles</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Building Production AI Agents</a></li>
-                        <li><a href="#">MLOps Best Practices</a></li>
-                        <li><a href="#">Advanced RAG Techniques</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Pavan Kumar Korlakunta. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
-        </div>
+        <p>&copy; 2024 Pavan Kumar Korlakunta. All rights reserved.</p>
     </footer>
 
-    <!-- Demo Modals -->
-    <div id="demo-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modal-title">Project Demo</h3>
-                <button class="modal-close" onclick="closeModal()">&times;</button>
-            </div>
-            <div class="modal-body" id="modal-body">
-                <!-- Demo content will be loaded here -->
-            </div>
-        </div>
-    </div>
+    <script>
+        // Smooth scrolling navigation
+        document.querySelectorAll('.nav-link, .btn[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    const headerHeight = 80;
+                    const targetPosition = targetSection.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Update active nav
+                document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                if (this.classList.contains('nav-link')) {
+                    this.classList.add('active');
+                }
+            });
+        });
 
-    <script src="script-enhanced.js"></script>
+        // Update active nav on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                    const activeNav = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                    if (activeNav) activeNav.classList.add('active');
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.phase-card, .project-card, .contact-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
