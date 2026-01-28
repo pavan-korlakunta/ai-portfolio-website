@@ -135,6 +135,45 @@
             gap: 0.75rem;
         }
 
+        .ai-tools-horizontal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: flex-start;
+        }
+
+        .ai-tool-horizontal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #f1f5f9;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .ai-tool-horizontal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: #f1f5f9;
+        }
+
+        .tool-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
         .ai-tool-item {
             display: flex;
             flex-direction: column;
@@ -793,6 +832,22 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 0.5rem;
             }
+
+            .ai-tools-horizontal {
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .ai-tool-horizontal {
+                min-width: 100px;
+                padding: 0.75rem;
+                font-size: 0.8rem;
+            }
+
+            .tool-logo {
+                width: 32px;
+                height: 32px;
+            }
             
             .ai-tool-item {
                 padding: 0.5rem;
@@ -829,6 +884,22 @@
             
             .ai-tools-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .ai-tools-horizontal {
+                gap: 0.75rem;
+                justify-content: center;
+            }
+
+            .ai-tool-horizontal {
+                min-width: 80px;
+                padding: 0.5rem;
+                font-size: 0.75rem;
+            }
+
+            .tool-logo {
+                width: 28px;
+                height: 28px;
             }
             
             .nav-link {
@@ -1096,36 +1167,36 @@
                     </div>
 
                     <!-- AI Tools & Platforms Card -->
-                    <div class="sidebar-card ai-tools-card">
+                    <div class="sidebar-card ai-tools-card" style="grid-column: 1 / -1;">
                         <div class="sidebar-header">
                             <i class="fas fa-robot"></i>
                             <span>AI Tools & Platforms</span>
                         </div>
                         
                         <!-- AI Chatbots Section -->
-                        <div style="margin-bottom: 1.5rem;">
-                            <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🤖 AI Chatbots</h5>
-                            <div class="ai-tools-grid">
-                                <a href="https://chat.openai.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #10a37f;">
-                                        <i class="fas fa-comments"></i>
+                        <div style="margin-bottom: 2rem;">
+                            <h5 style="color: #3b82f6; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">🤖 AI Chatbots</h5>
+                            <div class="ai-tools-horizontal">
+                                <a href="https://chat.openai.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #10a37f; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                                        GPT
                                     </div>
                                     <span>ChatGPT</span>
                                 </a>
-                                <a href="https://gemini.google.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #4285f4;">
-                                        <i class="fas fa-gem"></i>
+                                <a href="https://gemini.google.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: linear-gradient(45deg, #4285f4, #34a853, #fbbc05, #ea4335); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
+                                        ✦
                                     </div>
                                     <span>Gemini</span>
                                 </a>
-                                <a href="https://claude.ai" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #d97706;">
-                                        <i class="fas fa-brain"></i>
+                                <a href="https://claude.ai" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #d97706; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                                        C
                                     </div>
                                     <span>Claude</span>
                                 </a>
-                                <a href="https://copilot.microsoft.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #0078d4;">
+                                <a href="https://copilot.microsoft.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #0078d4; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
                                         <i class="fab fa-microsoft"></i>
                                     </div>
                                     <span>Copilot</span>
@@ -1134,29 +1205,29 @@
                         </div>
 
                         <!-- AI Coding Tools Section -->
-                        <div style="margin-bottom: 1.5rem;">
-                            <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">💻 Free AI Coding Tools</h5>
-                            <div class="ai-tools-grid">
-                                <a href="https://github.com/features/copilot" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #24292e;">
+                        <div style="margin-bottom: 2rem;">
+                            <h5 style="color: #3b82f6; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">💻 Free AI Coding Tools</h5>
+                            <div class="ai-tools-horizontal">
+                                <a href="https://github.com/features/copilot" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #24292e; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
                                         <i class="fab fa-github"></i>
                                     </div>
                                     <span>GitHub Copilot</span>
                                 </a>
-                                <a href="https://codeium.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #09b6a2;">
-                                        <i class="fas fa-code"></i>
+                                <a href="https://codeium.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #09b6a2; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                                        { }
                                     </div>
                                     <span>Codeium</span>
                                 </a>
-                                <a href="https://tabnine.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #4c9aff;">
-                                        <i class="fas fa-magic"></i>
+                                <a href="https://tabnine.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #4c9aff; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                                        T
                                     </div>
                                     <span>Tabnine</span>
                                 </a>
-                                <a href="https://www.cursor.so" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #000;">
+                                <a href="https://www.cursor.so" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #000; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
                                         <i class="fas fa-mouse-pointer"></i>
                                     </div>
                                     <span>Cursor</span>
@@ -1166,28 +1237,28 @@
 
                         <!-- Free AI Platforms Section -->
                         <div>
-                            <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🆓 Free AI Platforms</h5>
-                            <div class="ai-tools-grid">
-                                <a href="https://huggingface.co" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #ff9d00;">
-                                        <i class="fas fa-smile"></i>
+                            <h5 style="color: #3b82f6; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">🆓 Free AI Platforms</h5>
+                            <div class="ai-tools-horizontal">
+                                <a href="https://huggingface.co" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #ff9d00; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                                        🤗
                                     </div>
                                     <span>Hugging Face</span>
                                 </a>
-                                <a href="https://colab.research.google.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #f9ab00;">
+                                <a href="https://colab.research.google.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #f9ab00; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
                                         <i class="fab fa-google"></i>
                                     </div>
                                     <span>Google Colab</span>
                                 </a>
-                                <a href="https://www.kaggle.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #20beff;">
-                                        <i class="fab fa-kaggle"></i>
+                                <a href="https://www.kaggle.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #20beff; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                                        K
                                     </div>
                                     <span>Kaggle</span>
                                 </a>
-                                <a href="https://replicate.com" target="_blank" class="ai-tool-item">
-                                    <div class="tool-icon" style="background: #000;">
+                                <a href="https://replicate.com" target="_blank" class="ai-tool-horizontal">
+                                    <div class="tool-logo" style="background: #000; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
                                         <i class="fas fa-copy"></i>
                                     </div>
                                     <span>Replicate</span>
