@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan Kumar Korlakunta - AI Expert & Machine Learning Engineer</title>
+    <title>Pavan Kumar Korlakunta - AI Engineer | GenAI & MLOps</title>
+    <meta name="description" content="Pavan Kumar Korlakunta is an AI Engineer with 5+ years of experience in GenAI, MLOps, Computer Vision, NLP, and cloud deployment.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Pavan Kumar Korlakunta - AI Engineer">
+    <meta property="og:description" content="AI/ML portfolio featuring projects, skills, and 5+ years of professional experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pavan6570.github.io/ai-portfolio-website/">
+    <meta property="og:image" content="assets/profile-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pavan Kumar Korlakunta - AI Engineer">
+    <meta name="twitter:description" content="Portfolio with AI engineering, GenAI, MLOps, and cloud-focused projects.">
+    <link rel="canonical" href="https://pavan6570.github.io/ai-portfolio-website/">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <style>
+        :root {
+            --bg-main: #f7fbf5;
+            --bg-surface: #eef5e8;
+            --accent: #8faf82;
+            --text-main: #243126;
+            --text-muted: #5f6f60;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -18,8 +37,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
+            background: radial-gradient(circle at 15% 20%, #ffffff 0%, #f2f8ee 46%, #edf5e8 100%);
+            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -31,7 +50,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(247, 251, 245, 0.92);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(148, 163, 184, 0.1);
             height: 80px;
@@ -60,14 +79,14 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            border: 3px solid #3b82f6;
+            border: 3px solid var(--accent);
             object-fit: cover;
         }
 
         .profile-name {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: var(--text-main);
             white-space: nowrap;
         }
 
@@ -87,7 +106,7 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1rem;
-            color: #94a3b8;
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 500;
             border-radius: 8px;
@@ -99,8 +118,8 @@
 
         .nav-link:hover,
         .nav-link.active {
-            color: #3b82f6;
-            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            background: rgba(143, 175, 130, 0.1);
         }
 
         .social-link.linkedin:hover {
@@ -113,7 +132,7 @@
             display: none;
             background: none;
             border: none;
-            color: #f1f5f9;
+            color: var(--text-main);
             font-size: 1.5rem;
             cursor: pointer;
             padding: 0.5rem;
@@ -122,8 +141,8 @@
         }
 
         .mobile-menu-toggle:hover {
-            background: rgba(59, 130, 246, 0.1);
-            color: #3b82f6;
+            background: rgba(143, 175, 130, 0.1);
+            color: var(--accent);
         }
 
         .mobile-nav-overlay {
@@ -144,7 +163,7 @@
             right: -100%;
             width: 280px;
             height: 100vh;
-            background: rgba(15, 23, 42, 0.98);
+            background: rgba(247, 251, 245, 0.96);
             backdrop-filter: blur(20px);
             border-left: 1px solid rgba(148, 163, 184, 0.1);
             padding: 2rem;
@@ -169,7 +188,7 @@
         .mobile-nav-close {
             background: none;
             border: none;
-            color: #f1f5f9;
+            color: var(--text-main);
             font-size: 1.5rem;
             cursor: pointer;
             padding: 0.5rem;
@@ -198,8 +217,8 @@
         }
 
         .mobile-nav-links .nav-link:hover {
-            background: rgba(59, 130, 246, 0.1);
-            border-color: rgba(59, 130, 246, 0.3);
+            background: rgba(143, 175, 130, 0.1);
+            border-color: rgba(143, 175, 130, 0.3);
         }
 
         .mobile-nav-links .social-link.linkedin:hover {
@@ -218,7 +237,7 @@
         }
 
         .sidebar-card {
-            background: rgba(51, 65, 85, 0.5);
+            background: #ffffffcc;
             border: 1px solid rgba(148, 163, 184, 0.1);
             border-radius: 12px;
             padding: 1.5rem;
@@ -229,7 +248,7 @@
         .sidebar-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
+            border-color: rgba(143, 175, 130, 0.3);
         }
 
         .sidebar-header {
@@ -238,7 +257,7 @@
             gap: 0.75rem;
             margin-bottom: 1rem;
             font-weight: 600;
-            color: #f1f5f9;
+            color: var(--text-main);
         }
 
         .sidebar-header i {
@@ -246,88 +265,8 @@
         }
 
         .linkedin-card .sidebar-header i { color: #0077b5; }
-        .github-card .sidebar-header i { color: #f1f5f9; }
-        .education-card .sidebar-header i { color: #3b82f6; }
-        .ai-tools-card .sidebar-header i { color: #8b5cf6; }
-
-        .ai-tools-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-        }
-
-        .ai-tools-horizontal {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: flex-start;
-        }
-
-        .ai-tool-horizontal {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem;
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            border-radius: 12px;
-            text-decoration: none;
-            color: #f1f5f9;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-align: center;
-            min-width: 120px;
-        }
-
-        .ai-tool-horizontal:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
-            color: #f1f5f9;
-        }
-
-        .tool-logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            object-fit: contain;
-        }
-
-        .ai-tool-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem;
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            border-radius: 8px;
-            text-decoration: none;
-            color: #f1f5f9;
-            font-size: 0.75rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .ai-tool-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
-        }
-
-        .tool-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.9rem;
-        }
+        .github-card .sidebar-header i { color: var(--text-main); }
+        .education-card .sidebar-header i { color: var(--accent); }
 
         .sidebar-btn {
             display: block;
@@ -375,14 +314,24 @@
         .education-item h4 {
             font-size: 0.9rem;
             font-weight: 600;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin-bottom: 0.25rem;
             line-height: 1.2;
         }
 
+        .degree-two-line {
+            display: inline-block;
+            line-height: 1.25;
+        }
+
+        .degree-two-line span {
+            display: block;
+            white-space: nowrap;
+        }
+
         .education-item p {
             font-size: 0.8rem;
-            color: #94a3b8;
+            color: var(--text-muted);
         }
 
         /* Main Content - Full width now */
@@ -396,7 +345,7 @@
             min-height: 90vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            background: linear-gradient(135deg, #f7fbf5 0%, #eef6e9 50%, #f7fbf5 100%);
             position: relative;
             overflow: hidden;
         }
@@ -409,8 +358,8 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 80%, rgba(143, 175, 130, 0.25) 0%, transparent 52%),
+                radial-gradient(circle at 80% 20%, rgba(189, 210, 179, 0.28) 0%, transparent 48%);
         }
 
         .hero-content {
@@ -424,21 +373,21 @@
         .hero-title {
             font-size: 4rem;
             font-weight: 800;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin-bottom: 1.5rem;
             line-height: 1.1;
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
-            color: #3b82f6;
+            color: var(--accent);
             margin-bottom: 2rem;
             font-weight: 600;
         }
 
         .hero-description {
             font-size: 1.25rem;
-            color: #94a3b8;
+            color: var(--text-muted);
             max-width: 800px;
             margin-bottom: 3rem;
             line-height: 1.7;
@@ -457,12 +406,12 @@
         .stat-number {
             font-size: 3rem;
             font-weight: 800;
-            color: #3b82f6;
+            color: var(--accent);
             display: block;
         }
 
         .stat-label {
-            color: #94a3b8;
+            color: var(--text-muted);
             font-weight: 500;
         }
 
@@ -485,44 +434,26 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, var(--accent), #6f8d63);
             color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 25px rgba(143, 175, 130, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            color: #3b82f6;
-            border: 2px solid #3b82f6;
+            color: var(--accent);
+            border: 2px solid var(--accent);
         }
 
         .btn-secondary:hover {
-            background: #3b82f6;
+            background: var(--accent);
             color: white;
             transform: translateY(-2px);
         }
-
-        /* Profile Info Section */
-        .profile-info {
-            background: rgba(30, 41, 59, 0.3);
-        }
-
-        .profile-info-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .profile-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
         /* Sections */
         .section {
             padding: 5rem 2rem;
@@ -533,21 +464,21 @@
         .section-title {
             font-size: 3rem;
             font-weight: 800;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin-bottom: 1rem;
             text-align: center;
         }
 
         .section-subtitle {
             font-size: 1.25rem;
-            color: #94a3b8;
+            color: var(--text-muted);
             text-align: center;
             margin-bottom: 4rem;
         }
 
         /* About Section */
         .about {
-            background: rgba(30, 41, 59, 0.3);
+            background: #eef5e899;
         }
 
         .about-personal {
@@ -558,7 +489,7 @@
 
         .about-personal p {
             font-size: 1.1rem;
-            color: #94a3b8;
+            color: var(--text-muted);
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
@@ -577,7 +508,7 @@
         }
 
         .skill-category {
-            background: rgba(51, 65, 85, 0.5);
+            background: #ffffffcc;
             padding: 2.5rem;
             border-radius: 12px;
             border: 1px solid rgba(148, 163, 184, 0.1);
@@ -587,11 +518,11 @@
         .skill-category:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
+            border-color: rgba(143, 175, 130, 0.3);
         }
 
         .skill-category h3 {
-            color: #3b82f6;
+            color: var(--accent);
             margin-bottom: 1.5rem;
             font-size: 1.5rem;
             display: flex;
@@ -609,14 +540,14 @@
 
         .skill-category li {
             padding: 0.75rem 0;
-            color: #94a3b8;
+            color: var(--text-muted);
             border-bottom: 1px solid rgba(148, 163, 184, 0.1);
             transition: color 0.3s ease;
             line-height: 1.6;
         }
 
         .skill-category li:hover {
-            color: #f1f5f9;
+            color: var(--text-main);
         }
 
         .skill-category li:last-child {
@@ -624,77 +555,85 @@
         }
 
         .skill-category li strong {
-            color: #f1f5f9;
+            color: var(--text-main);
             font-weight: 600;
         }
 
         /* Education Section */
         .education-section {
-            background: rgba(15, 23, 42, 0.5);
+            background: #f1f8edcc;
+            max-width: 100%;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
 
         .education-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 3rem;
-            max-width: 1100px;
+            max-width: 1400px;
             margin: 0 auto;
+            align-items: stretch;
         }
 
         .education-card-large {
-            background: rgba(51, 65, 85, 0.5);
+            background: #ffffffcc;
             padding: 2.5rem;
             border-radius: 12px;
             border: 1px solid rgba(148, 163, 184, 0.1);
             transition: all 0.3s ease;
+            height: 100%;
         }
 
         .education-card-large:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
+            border-color: rgba(143, 175, 130, 0.3);
         }
 
         .education-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
+            display: grid;
+            grid-template-columns: 2.25rem 1fr;
+            column-gap: 1rem;
+            align-items: start;
             margin-bottom: 2rem;
+        }
+
+        .education-header > div {
+            flex: 1;
         }
 
         .education-header i {
             font-size: 2rem;
-            color: #3b82f6;
-            margin-top: 0.25rem;
+            color: var(--accent);
+            margin-top: 0.15rem;
+            width: 2.25rem;
+            text-align: center;
         }
 
         .education-header h3 {
-            color: #f1f5f9;
+            color: var(--text-main);
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin: 0;
             line-height: 1.3;
         }
 
         .education-header .university {
-            color: #3b82f6;
+            color: var(--accent);
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 0.25rem;
-        }
-
-        .education-header .duration {
-            color: #94a3b8;
-            font-size: 0.9rem;
+            white-space: nowrap;
         }
 
         .education-details p {
-            color: #94a3b8;
+            color: var(--text-muted);
             margin-bottom: 1rem;
             line-height: 1.6;
         }
 
         .education-details strong {
-            color: #f1f5f9;
+            color: var(--text-main);
             font-weight: 600;
         }
 
@@ -703,91 +642,141 @@
             align-items: center;
             gap: 1rem;
             margin-bottom: 0.5rem;
+            min-height: 56px;
         }
 
         .university-logo {
-            width: 50px;
-            height: 50px;
+            width: 56px;
+            height: 56px;
             object-fit: contain;
+            object-position: center;
             border-radius: 8px;
             background: white;
             padding: 4px;
             border: 1px solid rgba(148, 163, 184, 0.2);
+            flex-shrink: 0;
         }
 
-        /* Learning Section */
+        .semo-logo {
+            object-position: center 38%;
+        }
+        /* Experience Section */
         .learning {
-            background: rgba(15, 23, 42, 0.5);
+            background: #f1f8edcc;
         }
 
-        .phases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+        .platform-strip {
+            margin-top: 2.5rem;
+            text-align: center;
         }
 
-        .phase-card {
-            background: rgba(51, 65, 85, 0.5);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .phase-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
-        }
-
-        .phase-number {
-            position: absolute;
-            top: -15px;
-            left: 2rem;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
-
-        .phase-card h3 {
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            color: #f1f5f9;
-            font-size: 1.25rem;
-        }
-
-        .phase-card p {
-            color: #94a3b8;
+        .platform-strip h3 {
+            color: var(--text-main);
+            font-size: 1.3rem;
             margin-bottom: 1rem;
         }
 
-        .phase-card ul {
-            list-style: none;
+        .platform-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
         }
 
-        .phase-card li {
-            padding: 0.5rem 0;
-            color: #94a3b8;
+        .platform-pill {
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 999px;
+            color: #4f6152;
+            font-size: 0.85rem;
+            background: #f7fbf5cc;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .impact-item {
+            background: #ffffffcc;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            border-radius: 12px;
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .impact-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .impact-label {
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
-        .phase-card li:before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            margin-right: 0.75rem;
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(260px, 1fr));
+            gap: 1.25rem;
         }
 
+        .xp-card {
+            background: #ffffffcc;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .xp-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+            border-color: rgba(14, 165, 164, 0.35);
+        }
+
+        .xp-card h3 {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .xp-card p {
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .xp-list {
+            list-style: none;
+        }
+
+        .xp-list li {
+            color: #4f6152;
+            font-size: 0.9rem;
+            padding: 0.35rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .xp-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+            position: absolute;
+            left: 0;
+            top: 0.8rem;
+        }
         /* Projects Section */
         .projects {
-            background: rgba(30, 41, 59, 0.3);
+            background: #eef5e899;
         }
 
         .projects-grid {
@@ -797,7 +786,7 @@
         }
 
         .project-card {
-            background: rgba(51, 65, 85, 0.5);
+            background: #ffffffcc;
             border: 1px solid rgba(148, 163, 184, 0.1);
             border-radius: 12px;
             overflow: hidden;
@@ -807,7 +796,7 @@
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
+            border-color: rgba(143, 175, 130, 0.3);
         }
 
         .project-header {
@@ -819,7 +808,7 @@
         }
 
         .project-header h3 {
-            color: #f1f5f9;
+            color: var(--text-main);
             font-size: 1.25rem;
         }
 
@@ -837,8 +826,8 @@
         }
 
         .project-status.completed {
-            background: rgba(59, 130, 246, 0.2);
-            color: #3b82f6;
+            background: rgba(143, 175, 130, 0.2);
+            color: var(--accent);
         }
 
         .project-body {
@@ -846,7 +835,7 @@
         }
 
         .project-description {
-            color: #94a3b8;
+            color: var(--text-muted);
             margin-bottom: 1rem;
             line-height: 1.6;
         }
@@ -859,8 +848,8 @@
         }
 
         .tech-tag {
-            background: rgba(59, 130, 246, 0.2);
-            color: #3b82f6;
+            background: rgba(143, 175, 130, 0.2);
+            color: var(--accent);
             padding: 0.25rem 0.75rem;
             border-radius: 6px;
             font-size: 0.75rem;
@@ -871,7 +860,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #3b82f6;
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
@@ -883,7 +872,7 @@
 
         /* Contact Section */
         .contact {
-            background: rgba(15, 23, 42, 0.5);
+            background: #f1f8edcc;
         }
 
         .contact-content {
@@ -903,7 +892,7 @@
             align-items: center;
             gap: 1rem;
             padding: 1.5rem;
-            background: rgba(51, 65, 85, 0.5);
+            background: #ffffffcc;
             border-radius: 12px;
             border: 1px solid rgba(148, 163, 184, 0.1);
             transition: all 0.3s ease;
@@ -911,13 +900,13 @@
 
         .contact-item:hover {
             transform: translateY(-2px);
-            border-color: rgba(59, 130, 246, 0.3);
+            border-color: rgba(143, 175, 130, 0.3);
         }
 
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, var(--accent), #6f8d63);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -927,7 +916,7 @@
         }
 
         .contact-form {
-            background: rgba(51, 65, 85, 0.5);
+            background: #ffffffcc;
             padding: 2rem;
             border-radius: 12px;
             border: 1px solid rgba(148, 163, 184, 0.1);
@@ -946,7 +935,7 @@
             border-radius: 8px;
             font-size: 1rem;
             background: rgba(30, 41, 59, 0.5);
-            color: #f1f5f9;
+            color: var(--text-main);
             transition: all 0.3s ease;
         }
 
@@ -954,8 +943,8 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(143, 175, 130, 0.1);
         }
 
         .form-group input::placeholder,
@@ -965,8 +954,8 @@
 
         /* Footer */
         .footer {
-            background: rgba(15, 23, 42, 0.95);
-            color: #94a3b8;
+            background: rgba(247, 251, 245, 0.92);
+            color: var(--text-muted);
             text-align: center;
             padding: 2rem;
             border-top: 1px solid rgba(148, 163, 184, 0.1);
@@ -1073,8 +1062,8 @@
             }
 
             .university-info {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                align-items: center;
                 gap: 0.75rem;
             }
 
@@ -1082,10 +1071,18 @@
                 width: 40px;
                 height: 40px;
             }
+
+            .education-header h3 {
+                min-height: 0;
+            }
+
+            .education-header .university {
+                white-space: normal;
+            }
             
-            .phases-grid,
+            .experience-grid,
             .projects-grid,
-            .profile-cards-grid {
+            .impact-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1112,38 +1109,6 @@
             .section-subtitle {
                 font-size: 1.1rem;
             }
-            
-            .ai-tools-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 0.5rem;
-            }
-
-            .ai-tools-horizontal {
-                gap: 1rem;
-                justify-content: center;
-            }
-
-            .ai-tool-horizontal {
-                min-width: 100px;
-                padding: 0.75rem;
-                font-size: 0.8rem;
-            }
-
-            .tool-logo {
-                width: 32px;
-                height: 32px;
-            }
-            
-            .ai-tool-item {
-                padding: 0.5rem;
-                font-size: 0.7rem;
-            }
-            
-            .tool-icon {
-                width: 28px;
-                height: 28px;
-                font-size: 0.8rem;
-            }
         }
 
         @media (max-width: 480px) {
@@ -1167,28 +1132,30 @@
                 font-size: 2rem;
             }
             
-            .ai-tools-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ai-tools-horizontal {
-                gap: 0.75rem;
-                justify-content: center;
-            }
-
-            .ai-tool-horizontal {
-                min-width: 80px;
-                padding: 0.5rem;
-                font-size: 0.75rem;
-            }
-
-            .tool-logo {
-                width: 28px;
-                height: 28px;
-            }
-            
             .nav-link {
                 padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-stats {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header-content {
+                padding: 0 0.5rem;
+                gap: 0.5rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .nav-link {
+                padding: 0.6rem 0.75rem;
                 font-size: 0.8rem;
             }
         }
@@ -1216,20 +1183,20 @@
         <div class="header-content">
             <div class="profile-section">
                 <img src="assets/profile-image.jpg" alt="Pavan Kumar Korlakunta" class="profile-image" 
-                     onerror="this.src='https://via.placeholder.com/60x60/3b82f6/ffffff?text=PK'">
+                     onerror="this.src='https://via.placeholder.com/60x60/8faf82/ffffff?text=PK'">
                 <h1 class="profile-name">Pavan Kumar Korlakunta</h1>
             </div>
             
             <nav class="main-nav">
                 <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
                 <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
-                <a href="#learning" class="nav-link"><i class="fas fa-graduation-cap"></i> AI Learning</a>
+                <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
                 <a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a>
                 <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-                <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" class="nav-link social-link linkedin">
+                <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" rel="noopener noreferrer" class="nav-link social-link linkedin">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://github.com/pavan-korlakunta" target="_blank" class="nav-link social-link github">
+                <a href="https://github.com/pavan-korlakunta" target="_blank" rel="noopener noreferrer" class="nav-link social-link github">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </nav>
@@ -1246,7 +1213,7 @@
     <!-- Mobile Navigation Menu -->
     <nav class="mobile-nav-menu" id="mobileNavMenu">
         <div class="mobile-nav-header">
-            <h3 style="color: #f1f5f9; margin: 0;">Navigation</h3>
+            <h3 style="color: var(--text-main); margin: 0;">Navigation</h3>
             <button class="mobile-nav-close" onclick="closeMobileMenu()">
                 <i class="fas fa-times"></i>
             </button>
@@ -1259,8 +1226,8 @@
             <a href="#about" class="nav-link" onclick="closeMobileMenu()">
                 <i class="fas fa-user"></i> About
             </a>
-            <a href="#learning" class="nav-link" onclick="closeMobileMenu()">
-                <i class="fas fa-graduation-cap"></i> AI Learning
+            <a href="#experience" class="nav-link" onclick="closeMobileMenu()">
+                <i class="fas fa-briefcase"></i> Experience
             </a>
             <a href="#projects" class="nav-link" onclick="closeMobileMenu()">
                 <i class="fas fa-code"></i> Projects
@@ -1268,10 +1235,10 @@
             <a href="#contact" class="nav-link" onclick="closeMobileMenu()">
                 <i class="fas fa-envelope"></i> Contact
             </a>
-            <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" class="nav-link social-link linkedin">
+            <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" rel="noopener noreferrer" class="nav-link social-link linkedin">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://github.com/pavan-korlakunta" target="_blank" class="nav-link social-link github">
+            <a href="https://github.com/pavan-korlakunta" target="_blank" rel="noopener noreferrer" class="nav-link social-link github">
                 <i class="fab fa-github"></i> GitHub
             </a>
         </div>
@@ -1284,8 +1251,8 @@
                 <i class="fab fa-linkedin"></i>
                 <span>LinkedIn</span>
             </div>
-            <p style="color: #94a3b8; margin-bottom: 1rem; white-space: nowrap;">Connect professionally</p>
-            <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" class="sidebar-btn linkedin-btn">
+            <p style="color: var(--text-muted); margin-bottom: 1rem; white-space: nowrap;">Connect professionally</p>
+            <a href="https://www.linkedin.com/in/pavan-korlakunta-1a04b1324" target="_blank" rel="noopener noreferrer" class="sidebar-btn linkedin-btn">
                 <i class="fab fa-linkedin"></i> Connect
             </a>
         </div>
@@ -1295,8 +1262,8 @@
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
             </div>
-            <p style="color: #94a3b8; margin-bottom: 1rem;">View repositories</p>
-            <a href="https://github.com/pavan-korlakunta" target="_blank" class="sidebar-btn github-btn">
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">View repositories</p>
+            <a href="https://github.com/pavan-korlakunta" target="_blank" rel="noopener noreferrer" class="sidebar-btn github-btn">
                 <i class="fab fa-github"></i> Follow
             </a>
         </div>
@@ -1311,111 +1278,11 @@
                 <p>Southeast Missouri State University</p>
             </div>
             <div class="education-item">
-                <h4>Bachelor of Technology in Information Technology</h4>
+                <h4 class="degree-two-line"><span>Bachelor of Technology</span><span>Information Technology</span></h4>
                 <p>Vasireddy Venkatadri Institute of Technology</p>
             </div>
         </div>
 
-        <!-- AI Tools & Platforms Card -->
-        <div class="sidebar-card ai-tools-card">
-            <div class="sidebar-header">
-                <i class="fas fa-robot"></i>
-                <span>AI Tools & Platforms</span>
-            </div>
-            
-            <!-- AI Chatbots Section -->
-            <div style="margin-bottom: 1.5rem;">
-                <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🤖 AI Chatbots</h5>
-                <div class="ai-tools-grid">
-                    <a href="https://chat.openai.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #10a37f;">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <span>ChatGPT</span>
-                    </a>
-                    <a href="https://gemini.google.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #4285f4;">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <span>Gemini</span>
-                    </a>
-                    <a href="https://claude.ai" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #d97706;">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <span>Claude</span>
-                    </a>
-                    <a href="https://copilot.microsoft.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #0078d4;">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <span>Copilot</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- AI Coding Tools Section -->
-            <div style="margin-bottom: 1.5rem;">
-                <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">💻 Free AI Coding Tools</h5>
-                <div class="ai-tools-grid">
-                    <a href="https://github.com/features/copilot" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #24292e;">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <span>GitHub Copilot</span>
-                    </a>
-                    <a href="https://codeium.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #09b6a2;">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <span>Codeium</span>
-                    </a>
-                    <a href="https://tabnine.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #4c9aff;">
-                            <i class="fas fa-magic"></i>
-                        </div>
-                        <span>Tabnine</span>
-                    </a>
-                    <a href="https://www.cursor.so" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #000;">
-                            <i class="fas fa-mouse-pointer"></i>
-                        </div>
-                        <span>Cursor</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Free AI Platforms Section -->
-            <div>
-                <h5 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 600;">🆓 Free AI Platforms</h5>
-                <div class="ai-tools-grid">
-                    <a href="https://huggingface.co" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #ff9d00;">
-                            <i class="fas fa-smile"></i>
-                        </div>
-                        <span>Hugging Face</span>
-                    </a>
-                    <a href="https://colab.research.google.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #f9ab00;">
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <span>Google Colab</span>
-                    </a>
-                    <a href="https://www.kaggle.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #20beff;">
-                            <i class="fab fa-kaggle"></i>
-                        </div>
-                        <span>Kaggle</span>
-                    </a>
-                    <a href="https://replicate.com" target="_blank" class="ai-tool-item">
-                        <div class="tool-icon" style="background: #000;">
-                            <i class="fas fa-copy"></i>
-                        </div>
-                        <span>Replicate</span>
-                    </a>
-                </div>
-            </div>
-        </div>
     </aside>
 
     <!-- Main Content -->
@@ -1423,29 +1290,29 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h2 class="hero-title">AI Expert & ML Engineer</h2>
-                <p class="hero-subtitle">Transforming Ideas into Intelligent Solutions</p>
+                <h2 class="hero-title">AI Engineer</h2>
+                <p class="hero-subtitle">AI/ML, GenAI, and MLOps Solutions</p>
                 <p class="hero-description">
-                    Specializing in Machine Learning, Deep Learning, Computer Vision, and NLP with 3+ years 
+                    Specializing in Machine Learning, Deep Learning, Computer Vision, and NLP with 5+ years 
                     of experience across the complete AI ecosystem. Based in Atlanta, Georgia.
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">3+</span>
+                        <span class="stat-number">5+</span>
                         <span class="stat-label">Years Experience</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">AI Resources</span>
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Production Deployments</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Free Learning</span>
+                        <span class="stat-number">30%+</span>
+                        <span class="stat-label">Delivery Acceleration</span>
                     </div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#learning" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> Start Learning AI
+                    <a href="#experience" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> View Experience
                     </a>
                     <a href="#projects" class="btn btn-secondary">
                         <i class="fas fa-eye"></i> View Projects
@@ -1465,12 +1332,11 @@
                         <i class="fas fa-graduation-cap"></i>
                         <div>
                             <div class="university-info">
-                                <img src="assets/semo-logo.png" alt="Southeast Missouri State University" class="university-logo" 
-                                     onerror="this.style.display='none'">
-                                <h3>Master of Science in Computer Science</h3>
+                                <img src="https://gosoutheast.com/images/2020/6/11/SEMO_Logo_71.png" alt="Southeast Missouri State University" class="university-logo semo-logo" 
+                                     onerror="this.onerror=null;this.src='assets/semo-logo.svg';">
+                                <h3>Master's in Computer Science</h3>
                             </div>
                             <p class="university">Southeast Missouri State University</p>
-                            <p class="duration">2022 - 2024</p>
                         </div>
                     </div>
                     <div class="education-details">
@@ -1486,11 +1352,10 @@
                         <div>
                             <div class="university-info">
                                 <img src="assets/vvit-logo.png" alt="Vasireddy Venkatadri Institute of Technology" class="university-logo" 
-                                     onerror="this.style.display='none'">
-                                <h3>Bachelor of Technology in Information Technology</h3>
+                                     onerror="this.onerror=null;this.src='assets/vvit-logo.svg';">
+                                <h3>Bachelor's in Information Technology</h3>
                             </div>
                             <p class="university">Vasireddy Venkatadri Institute of Technology (VVIT)</p>
-                            <p class="duration">2018 - 2022</p>
                         </div>
                     </div>
                     <div class="education-details">
@@ -1502,136 +1367,24 @@
                 </div>
             </div>
         </section>
-
-        <!-- Profile Info Section (AI Tools Only) -->
-        <section class="section profile-info">
-            <div class="profile-info-container">
-                <div class="profile-cards-grid" style="justify-content: center;">
-                    <!-- AI Tools & Platforms Card -->
-                    <div class="sidebar-card ai-tools-card" style="max-width: 1000px; width: 100%;">
-                        <div class="sidebar-header">
-                            <i class="fas fa-robot"></i>
-                            <span>AI Tools & Platforms</span>
-                        </div>
-                        
-                        <!-- AI Chatbots Section -->
-                        <div style="margin-bottom: 2rem;">
-                            <h5 style="color: #3b82f6; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">🤖 AI Chatbots</h5>
-                            <div class="ai-tools-horizontal">
-                                <a href="https://chat.openai.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #10a37f; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
-                                        <i class="fas fa-comments"></i>
-                                    </div>
-                                    <span>ChatGPT</span>
-                                </a>
-                                <a href="https://gemini.google.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: linear-gradient(45deg, #4285f4, #34a853, #fbbc05, #ea4335); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
-                                        ✦
-                                    </div>
-                                    <span>Gemini</span>
-                                </a>
-                                <a href="https://claude.ai" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #d97706; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
-                                        C
-                                    </div>
-                                    <span>Claude</span>
-                                </a>
-                                <a href="https://copilot.microsoft.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #0078d4; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
-                                        <i class="fab fa-microsoft"></i>
-                                    </div>
-                                    <span>Copilot</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- AI Coding Tools Section -->
-                        <div style="margin-bottom: 2rem;">
-                            <h5 style="color: #3b82f6; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">💻 Free AI Coding Tools</h5>
-                            <div class="ai-tools-horizontal">
-                                <a href="https://github.com/features/copilot" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #24292e; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                    <span>GitHub Copilot</span>
-                                </a>
-                                <a href="https://codeium.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #09b6a2; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
-                                        { }
-                                    </div>
-                                    <span>Codeium</span>
-                                </a>
-                                <a href="https://tabnine.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #4c9aff; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
-                                        T
-                                    </div>
-                                    <span>Tabnine</span>
-                                </a>
-                                <a href="https://www.cursor.so" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #000; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
-                                        <i class="fas fa-mouse-pointer"></i>
-                                    </div>
-                                    <span>Cursor</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Free AI Platforms Section -->
-                        <div>
-                            <h5 style="color: #3b82f6; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">🆓 Free AI Platforms</h5>
-                            <div class="ai-tools-horizontal">
-                                <a href="https://huggingface.co" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #ff9d00; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
-                                        🤗
-                                    </div>
-                                    <span>Hugging Face</span>
-                                </a>
-                                <a href="https://colab.research.google.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #f9ab00; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
-                                        <i class="fab fa-google"></i>
-                                    </div>
-                                    <span>Google Colab</span>
-                                </a>
-                                <a href="https://www.kaggle.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #20beff; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
-                                        K
-                                    </div>
-                                    <span>Kaggle</span>
-                                </a>
-                                <a href="https://replicate.com" target="_blank" class="ai-tool-horizontal">
-                                    <div class="tool-logo" style="background: #000; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem;">
-                                        <i class="fas fa-copy"></i>
-                                    </div>
-                                    <span>Replicate</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- About Section -->
         <section id="about" class="section about">
             <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">AI Expert & Educator from Atlanta, Georgia</p>
+            <p class="section-subtitle">AI Engineer focused on production-grade intelligent systems</p>
             
-            <!-- Personal Information -->
             <div class="about-personal">
                 <p>
-                    I'm Pavan Kumar Korlakunta, an AI Expert and passionate educator based in Atlanta, Georgia. 
-                    With a Master's in Computer Science from Southeast Missouri State University and 3+ years 
-                    of hands-on experience, I specialize in the complete AI ecosystem.
+                    I'm Pavan Kumar Korlakunta, an AI Engineer based in Atlanta, Georgia.
+                    I bring 5+ years of experience building, deploying, and improving AI products across machine learning,
+                    deep learning, and large language model applications.
                 </p>
                 <p>
-                    My expertise spans Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, 
-                    Data Science, AI Agents, and MLOps. I'm proficient in cloud platforms including AWS, Azure, 
-                    and GCP, with infrastructure management using Terraform. I'm passionate about making AI accessible 
-                    to everyone through education and practical implementations.
+                    My core strengths include MLOps, model monitoring, API-first AI services, and cloud deployment on AWS,
+                    Azure, and GCP. I focus on measurable outcomes including stronger prediction quality, lower latency,
+                    and reliable model operations in production.
                 </p>
             </div>
 
-            <!-- Skills Grid -->
             <div class="about-content">
                 <div class="skills-grid">
                     <div class="skill-category">
@@ -1666,324 +1419,152 @@
                     </div>
                 </div>
             </div>
+
+            <div class="platform-strip">
+                <h3>Platforms I Work With</h3>
+                <div class="platform-list">
+                    <span class="platform-pill">OpenAI</span>
+                    <span class="platform-pill">Anthropic</span>
+                    <span class="platform-pill">Google AI</span>
+                    <span class="platform-pill">Hugging Face</span>
+                    <span class="platform-pill">AWS</span>
+                    <span class="platform-pill">Azure</span>
+                    <span class="platform-pill">GCP</span>
+                    <span class="platform-pill">Docker</span>
+                    <span class="platform-pill">Kubernetes</span>
+                    <span class="platform-pill">Terraform</span>
+                </div>
+            </div>
         </section>
 
-        <!-- AI Learning Section -->
-        <section id="learning" class="section learning">
-            <h2 class="section-title">Complete AI Learning Roadmap</h2>
-            <p class="section-subtitle">Master AI from Zero to Expert - Complete step-by-step guide</p>
-            
-            <!-- Learning Path Overview -->
-            <div style="background: rgba(51, 65, 85, 0.5); padding: 2rem; border-radius: 12px; margin-bottom: 3rem; text-align: center;">
-                <h3 style="color: #3b82f6; margin-bottom: 1rem;">🎯 Your Journey to AI Mastery</h3>
-                <p style="color: #94a3b8; font-size: 1.1rem;">Follow this structured path to become an AI Expert. Each phase builds upon the previous one.</p>
-            </div>
+        <!-- Experience Section -->
+        <section id="experience" class="section learning">
+            <h2 class="section-title">Experience & Impact</h2>
+            <p class="section-subtitle">Five years of AI/ML delivery across model development, deployment, and operations</p>
 
-            <div class="phases-grid">
-                <!-- Phase 1: Programming Foundations -->
-                <div class="phase-card">
-                    <div class="phase-number">01</div>
-                    <h3>Programming Foundations</h3>
-                    <p>Master the essential programming languages and tools</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">Languages to Learn:</h4>
-                        <ul>
-                            <li><strong>Python</strong> - Primary AI language</li>
-                            <li><strong>R</strong> - Statistical computing</li>
-                            <li><strong>SQL</strong> - Database management</li>
-                            <li><strong>JavaScript</strong> - Web deployment</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Tools & Concepts:</h4>
-                        <ul>
-                            <li>Git & GitHub version control</li>
-                            <li>Jupyter Notebooks & IDEs</li>
-                            <li>Command line basics</li>
-                            <li>Data structures & algorithms</li>
-                        </ul>
-                    </div>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-value">5+</span>
+                    <span class="impact-label">Years in AI Engineering</span>
                 </div>
-
-                <!-- Phase 2: Mathematics & Statistics -->
-                <div class="phase-card">
-                    <div class="phase-number">02</div>
-                    <h3>Mathematics & Statistics</h3>
-                    <p>Build the mathematical foundation for AI</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">Core Mathematics:</h4>
-                        <ul>
-                            <li><strong>Linear Algebra</strong> - Vectors, matrices</li>
-                            <li><strong>Calculus</strong> - Derivatives, gradients</li>
-                            <li><strong>Statistics</strong> - Probability, distributions</li>
-                            <li><strong>Discrete Math</strong> - Logic, sets</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Libraries:</h4>
-                        <ul>
-                            <li>NumPy - Numerical computing</li>
-                            <li>SciPy - Scientific computing</li>
-                            <li>Matplotlib/Seaborn - Visualization</li>
-                        </ul>
-                    </div>
+                <div class="impact-item">
+                    <span class="impact-value">15+</span>
+                    <span class="impact-label">Production AI Initiatives</span>
                 </div>
-
-                <!-- Phase 3: Data Science & Analytics -->
-                <div class="phase-card">
-                    <div class="phase-number">03</div>
-                    <h3>Data Science & Analytics</h3>
-                    <p>Learn to work with data effectively</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">Data Manipulation:</h4>
-                        <ul>
-                            <li><strong>Pandas</strong> - Data manipulation</li>
-                            <li><strong>Data cleaning</strong> - Handle missing data</li>
-                            <li><strong>EDA</strong> - Exploratory data analysis</li>
-                            <li><strong>Feature engineering</strong> - Create features</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Visualization:</h4>
-                        <ul>
-                            <li>Plotly - Interactive plots</li>
-                            <li>Tableau/Power BI - Dashboards</li>
-                            <li>Statistical analysis</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Phase 4: Machine Learning -->
-                <div class="phase-card">
-                    <div class="phase-number">04</div>
-                    <h3>Machine Learning</h3>
-                    <p>Master traditional ML algorithms and techniques</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">ML Algorithms:</h4>
-                        <ul>
-                            <li><strong>Supervised Learning</strong> - Regression, classification</li>
-                            <li><strong>Unsupervised Learning</strong> - Clustering, PCA</li>
-                            <li><strong>Ensemble Methods</strong> - Random Forest, XGBoost</li>
-                            <li><strong>Model Selection</strong> - Cross-validation</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Frameworks:</h4>
-                        <ul>
-                            <li>Scikit-learn - ML library</li>
-                            <li>XGBoost/LightGBM - Gradient boosting</li>
-                            <li>Model evaluation & tuning</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Phase 5: Deep Learning -->
-                <div class="phase-card">
-                    <div class="phase-number">05</div>
-                    <h3>Deep Learning</h3>
-                    <p>Neural networks and advanced architectures</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">Neural Networks:</h4>
-                        <ul>
-                            <li><strong>Fundamentals</strong> - Perceptrons, backpropagation</li>
-                            <li><strong>CNN</strong> - Convolutional networks</li>
-                            <li><strong>RNN/LSTM</strong> - Sequential data</li>
-                            <li><strong>Transformers</strong> - Attention mechanisms</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Frameworks:</h4>
-                        <ul>
-                            <li>TensorFlow/Keras - Google's framework</li>
-                            <li>PyTorch - Facebook's framework</li>
-                            <li>Transfer learning techniques</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Phase 6: Specialized AI Domains -->
-                <div class="phase-card">
-                    <div class="phase-number">06</div>
-                    <h3>Specialized AI Domains</h3>
-                    <p>Master specific AI applications</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">Computer Vision:</h4>
-                        <ul>
-                            <li><strong>OpenCV</strong> - Image processing</li>
-                            <li><strong>Object Detection</strong> - YOLO, R-CNN</li>
-                            <li><strong>Image Classification</strong> - ResNet, EfficientNet</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Natural Language Processing:</h4>
-                        <ul>
-                            <li>NLTK/spaCy - Text processing</li>
-                            <li>Transformers - BERT, GPT</li>
-                            <li>Hugging Face - Pre-trained models</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Phase 7: AI Agents & LLMs -->
-                <div class="phase-card">
-                    <div class="phase-number">07</div>
-                    <h3>AI Agents & LLMs</h3>
-                    <p>Build intelligent agents and work with large language models</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">LLM Technologies:</h4>
-                        <ul>
-                            <li><strong>OpenAI API</strong> - GPT integration</li>
-                            <li><strong>LangChain</strong> - LLM applications</li>
-                            <li><strong>Vector Databases</strong> - Pinecone, Weaviate</li>
-                            <li><strong>RAG Systems</strong> - Retrieval augmented generation</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">AI Agents:</h4>
-                        <ul>
-                            <li>Autonomous agents development</li>
-                            <li>Multi-agent systems</li>
-                            <li>Prompt engineering</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Phase 8: MLOps & Deployment -->
-                <div class="phase-card">
-                    <div class="phase-number">08</div>
-                    <h3>MLOps & Deployment</h3>
-                    <p>Deploy and manage AI systems in production</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">Deployment Tools:</h4>
-                        <ul>
-                            <li><strong>Docker</strong> - Containerization</li>
-                            <li><strong>Kubernetes</strong> - Orchestration</li>
-                            <li><strong>FastAPI/Flask</strong> - API development</li>
-                            <li><strong>Streamlit</strong> - Web apps</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">MLOps Platforms:</h4>
-                        <ul>
-                            <li>MLflow - Experiment tracking</li>
-                            <li>Kubeflow - ML workflows</li>
-                            <li>DVC - Data version control</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Phase 9: Cloud AI Platforms -->
-                <div class="phase-card">
-                    <div class="phase-number">09</div>
-                    <h3>Cloud AI Platforms</h3>
-                    <p>Master cloud-based AI services and infrastructure</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">AWS AI Services:</h4>
-                        <ul>
-                            <li><strong>SageMaker</strong> - ML platform</li>
-                            <li><strong>Bedrock</strong> - Foundation models</li>
-                            <li><strong>Rekognition</strong> - Computer vision</li>
-                            <li><strong>Comprehend</strong> - NLP service</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Azure & GCP:</h4>
-                        <ul>
-                            <li>Azure ML Studio</li>
-                            <li>Google AI Platform</li>
-                            <li>Terraform - Infrastructure as code</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Phase 10: AI Monitoring & Documentation -->
-                <div class="phase-card">
-                    <div class="phase-number">10</div>
-                    <h3>AI Monitoring & Documentation</h3>
-                    <p>Monitor, document, and maintain AI systems in production</p>
-                    <div style="margin: 1rem 0;">
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin-bottom: 0.5rem;">Model Monitoring:</h4>
-                        <ul>
-                            <li><strong>Weights & Biases</strong> - Experiment tracking</li>
-                            <li><strong>Neptune</strong> - ML metadata management</li>
-                            <li><strong>Evidently AI</strong> - Data drift detection</li>
-                            <li><strong>Grafana</strong> - Performance dashboards</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Documentation & Governance:</h4>
-                        <ul>
-                            <li><strong>Model Cards</strong> - AI documentation standard</li>
-                            <li><strong>Data Lineage</strong> - Track data flow</li>
-                            <li><strong>A/B Testing</strong> - Model performance comparison</li>
-                            <li><strong>Responsible AI</strong> - Ethics & bias detection</li>
-                        </ul>
-                        <h4 style="color: #3b82f6; font-size: 1rem; margin: 1rem 0 0.5rem 0;">Hot Trending Tools 2024:</h4>
-                        <ul>
-                            <li><strong>LangSmith</strong> - LLM observability</li>
-                            <li><strong>Arize AI</strong> - ML observability platform</li>
-                            <li><strong>Fiddler</strong> - Model performance monitoring</li>
-                            <li><strong>Whylabs</strong> - Data quality monitoring</li>
-                        </ul>
-                    </div>
+                <div class="impact-item">
+                    <span class="impact-value">30%+</span>
+                    <span class="impact-label">Average Delivery Acceleration</span>
                 </div>
             </div>
 
-            <!-- Learning Resources CTA -->
-            <div style="background: rgba(51, 65, 85, 0.5); padding: 3rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
-                <h3 style="color: #3b82f6; margin-bottom: 1rem;">🚀 Ready to Start Your AI Journey?</h3>
-                <p style="color: #94a3b8; margin-bottom: 2rem; font-size: 1.1rem;">
-                    This comprehensive roadmap covers 10 essential phases to take you from beginner to AI expert. Each phase typically takes 2-4 weeks of dedicated learning.
+            <div class="experience-grid">
+                <article class="xp-card">
+                    <h3>Senior AI/ML Engineer</h3>
+                    <p>Designed and shipped end-to-end ML pipelines for classification, forecasting, and recommendation systems.</p>
+                    <ul class="xp-list">
+                        <li>Productionized model training and inference workflows with CI/CD</li>
+                        <li>Improved model reliability using monitoring, drift alerts, and rollback strategies</li>
+                        <li>Partnered with product and analytics teams to convert business goals into ML deliverables</li>
+                    </ul>
+                </article>
+
+                <article class="xp-card">
+                    <h3>GenAI & LLM Solutions</h3>
+                    <p>Built retrieval-augmented generation and agentic workflows for enterprise use cases.</p>
+                    <ul class="xp-list">
+                        <li>Implemented vector search pipelines with robust grounding and evaluation</li>
+                        <li>Designed prompt, routing, and guardrail frameworks for consistent output quality</li>
+                        <li>Delivered API-based AI assistants integrated with existing business systems</li>
+                    </ul>
+                </article>
+
+                <article class="xp-card">
+                    <h3>MLOps & Cloud Engineering</h3>
+                    <p>Managed scalable AI infrastructure on AWS, Azure, and GCP for high-availability workloads.</p>
+                    <ul class="xp-list">
+                        <li>Automated deployments with Docker, Kubernetes, and Terraform</li>
+                        <li>Standardized model lifecycle governance and experiment tracking</li>
+                        <li>Optimized inference performance and infrastructure cost efficiency</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div style="background: #ffffffcc; padding: 2.2rem; border-radius: 12px; margin-top: 2.5rem; text-align: center;">
+                <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Open to AI/ML Opportunities</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem;">
+                    Available for full-time AI engineering roles, consulting engagements, and advanced GenAI solution development.
                 </p>
                 <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                     <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-graduation-cap"></i> Get Mentorship
+                        <i class="fas fa-envelope"></i> Contact Me
                     </a>
                     <a href="#projects" class="btn btn-secondary">
-                        <i class="fas fa-code"></i> See Real Projects
+                        <i class="fas fa-diagram-project"></i> Review Projects
                     </a>
                 </div>
             </div>
         </section>
-
         <!-- Projects Section -->
         <section id="projects" class="section projects">
             <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Real-world AI solutions and implementations</p>
+            <p class="section-subtitle">Production-style solutions with measurable engineering outcomes</p>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>AI Learning Platform</h3>
+                        <h3>AI Knowledge Assistant Platform</h3>
                         <span class="project-status active">Active</span>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Comprehensive learning platform with structured AI curriculum and progress tracking.
+                            Built a retrieval-augmented AI assistant for technical knowledge workflows with grounded responses and API-first integration.
                         </p>
                         <div class="tech-tags">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Vector DB</span>
+                            <span class="tech-tag">LLMs</span>
                         </div>
-                        <a href="https://github.com/pavan-korlakunta/ai-portfolio-website" target="_blank" class="project-link">
+                        <a href="https://github.com/pavan-korlakunta/ai-portfolio-website" target="_blank" rel="noopener noreferrer" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>ML Model Pipeline</h3>
+                        <h3>MLOps Forecasting Pipeline</h3>
                         <span class="project-status completed">Completed</span>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            End-to-end machine learning pipeline with automated model selection and deployment.
+                            Delivered an end-to-end forecasting pipeline with automated training, evaluation gates, and reproducible deployment.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Scikit-learn</span>
                             <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">MLflow</span>
                         </div>
-                        <a href="https://github.com/pavan-korlakunta" target="_blank" class="project-link">
+                        <a href="https://github.com/pavan-korlakunta" target="_blank" rel="noopener noreferrer" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Computer Vision System</h3>
+                        <h3>Computer Vision Inspection System</h3>
                         <span class="project-status completed">Completed</span>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Deep learning system for image classification and object detection using CNN architectures.
+                            Developed a CNN-based inspection pipeline for classification and object detection with optimized inference for practical deployment.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">TensorFlow</span>
                             <span class="tech-tag">OpenCV</span>
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ONNX</span>
                         </div>
-                        <a href="https://github.com/pavan-korlakunta" target="_blank" class="project-link">
+                        <a href="https://github.com/pavan-korlakunta" target="_blank" rel="noopener noreferrer" class="project-link">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
@@ -1994,7 +1575,7 @@
         <!-- Contact Section -->
         <section id="contact" class="section contact">
             <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Ready to collaborate or need AI mentorship?</p>
+            <p class="section-subtitle">Open to AI/ML roles, consulting, and collaboration</p>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -2002,8 +1583,8 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <h3 style="color: #f1f5f9; margin-bottom: 0.25rem;">Email</h3>
-                            <p style="color: #94a3b8; margin: 0;">kpkmlengineer@gmail.com</p>
+                            <h3 style="color: var(--text-main); margin-bottom: 0.25rem;">Email</h3>
+                            <p style="color: var(--text-muted); margin: 0;">kpkmlengineer@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -2011,8 +1592,8 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
-                            <h3 style="color: #f1f5f9; margin-bottom: 0.25rem;">Phone</h3>
-                            <p style="color: #94a3b8; margin: 0;">+1 (346) 495-7852</p>
+                            <h3 style="color: var(--text-main); margin-bottom: 0.25rem;">Phone</h3>
+                            <p style="color: var(--text-muted); margin: 0;">+1 (346) 495-7852</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -2020,8 +1601,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h3 style="color: #f1f5f9; margin-bottom: 0.25rem;">Location</h3>
-                            <p style="color: #94a3b8; margin: 0;">Atlanta, Georgia, USA</p>
+                            <h3 style="color: var(--text-main); margin-bottom: 0.25rem;">Location</h3>
+                            <p style="color: var(--text-muted); margin: 0;">Atlanta, Georgia, USA</p>
                         </div>
                     </div>
                 </div>
@@ -2058,10 +1639,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Pavan Kumar Korlakunta. All rights reserved.</p>
+        <p>&copy; <span id="footerYear">2026</span> Pavan Kumar Korlakunta. All rights reserved.</p>
     </footer>
 
     <script>
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
+
         // Mobile menu functions
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileNavMenu');
@@ -2145,7 +1728,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.phase-card, .project-card, .contact-item, .sidebar-card').forEach(el => {
+        document.querySelectorAll('.xp-card, .project-card, .contact-item, .sidebar-card').forEach(el => {
             observer.observe(el);
         });
 
@@ -2193,3 +1776,17 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

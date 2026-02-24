@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="VVIT logo fallback">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#115e59"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="112" height="112" rx="20" fill="url(#g2)"/>
+  <path d="M26 34h68v8H26zm0 44h68v8H26z" fill="#ffffff" fill-opacity="0.75"/>
+  <text x="60" y="67" text-anchor="middle" fill="#ffffff" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">VVIT</text>
+</svg>
